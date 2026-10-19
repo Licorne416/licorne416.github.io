@@ -138,18 +138,35 @@
                 </div>
             </div>
 
-            <!-- ATOUT LIAISON LES ARCS -->
-            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-xl border border-amber-500/20 space-y-2.5">
+           <!-- EMPLACEMENT STRATÉGIQUE AU CŒUR DE PARADISKI -->
+            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-xl border border-amber-500/20 space-y-4">
                 <div class="flex items-center gap-3 border-b border-amber-500/20 pb-3">
-                    <span class="text-2xl p-2 bg-amber-500/20 rounded-xl text-amber-400">🎿</span>
+                    <span class="text-3xl p-2 bg-amber-500/20 rounded-xl text-amber-400">🏔️</span>
                     <div>
-                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block" data-i18n="arcs_tag">Carrefour Paradiski</span>
-                        <h3 class="text-lg sm:text-xl font-black text-white" data-i18n="arcs_title">L'accès le plus rapide vers Les Arcs</h3>
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block" data-i18n="arcs_tag">L'un des plus grands domaines au monde</span>
+                        <h3 class="text-lg sm:text-xl font-black text-white" data-i18n="arcs_title">Paradiski : 425 km de pistes depuis votre porte</h3>
                     </div>
                 </div>
-                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify" data-i18n="arcs_desc">
-                    Depuis Belle Plagne, descendez directement à skis jusqu'au télésiège débrayable de l'Arpette. Du sommet, basculez d'une seule traite sur les pistes de Montchavin jusqu'au Vanoise Express : en moins de 25 minutes, vous skiez sur Les Arcs sans prendre aucun bus.
-                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-2xl space-y-2">
+                        <p class="font-bold text-amber-300 flex items-center gap-2 text-sm">
+                            <span>🚠</span> <span data-i18n="domain_peaks_title">Le meilleur de La Plagne en accès direct</span>
+                        </p>
+                        <p class="text-slate-300 leading-relaxed text-xs" data-i18n="domain_peaks_desc">
+                            Belle Plagne (2050m) est le cœur névralgique de la station. La télécabine centrale vous propulse immédiatement vers les neiges garanties de la <strong>Roche de Mio (2 730 m)</strong> et du glacier. Vous basculez tout aussi vite sur la <strong>Grande Rochette (2 505 m)</strong> pour dévaler les plus belles pistes face à un panorama alpin à 360°, sans subir de longues liaisons.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-4 rounded-2xl space-y-2">
+                        <p class="font-bold text-amber-300 flex items-center gap-2 text-sm">
+                            <span>⛷️</span> <span data-i18n="domain_arcs_title">Liaison express vers Les Arcs</span>
+                        </p>
+                        <p class="text-slate-300 leading-relaxed text-xs" data-i18n="arcs_desc">
+                            C'est le point de départ le plus stratégique du domaine : chaussez les skis devant l'immeuble, prenez l'Arpette et plongez d'une traite vers Montchavin. En moins de 25 minutes, vous embarquez dans le mythique <strong>Vanoise Express</strong> pour explorer Les Arcs, sans jamais déchausser ni prendre de navette routière.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- DÉTAILS ÉQUIPEMENTS & COUCHAGES -->
@@ -362,6 +379,9 @@
         // DICTIONNAIRES MULTILINGUES
         const i18n = {
             fr: {
+                domain_peaks_title: "Le meilleur de La Plagne en accès direct",
+                domain_peaks_desc: "Belle Plagne (2050m) est le cœur névralgique de la station. La télécabine centrale vous propulse immédiatement vers les neiges garanties de la Roche de Mio (2 730 m) et du glacier. Vous basculez tout aussi vite sur la Grande Rochette (2 505 m) pour dévaler les plus belles pistes face à un panorama alpin à 360°, sans subir de longues liaisons.",
+                domain_arcs_title: "Liaison express vers Les Arcs",               
                 badge_cristaux: "❄️ Label Paradiski : 4 Cristaux / 5",
                 badge_etoiles: "Meublé de Tourisme 2★",
                 hero_title: "Votre cocon d'altitude skis aux pieds",
@@ -372,8 +392,9 @@
                 stat_ski_label: "Pistes de ski", stat_ski_val: "0 Mètre", stat_ski_sub: "Porte RDC sur piste",
                 stat_park_label: "Parking couvert", stat_park_val: "100% Abrité", stat_park_sub: "Coursive directe 100 m",
                 stat_alt_label: "Altitude", stat_alt_val: "2 050 m", stat_alt_sub: "Station piétonne",
-                arcs_tag: "Carrefour Paradiski", arcs_title: "L'accès le plus rapide vers Les Arcs",
-                arcs_desc: "Depuis Belle Plagne, descendez directement à skis jusqu'au télésiège débrayable de l'Arpette. Du sommet, basculez d'une seule traite sur les pistes de Montchavin jusqu'au Vanoise Express : en moins de 25 minutes, vous skiez sur Les Arcs sans prendre aucun bus.",
+                arcs_tag: "L'un des plus grands domaines au monde", 
+                arcs_title: "Paradiski : 425 km de pistes depuis votre porte",
+                arcs_desc: "C'est le point de départ le plus stratégique du domaine : chaussez les skis devant l'immeuble, prenez l'Arpette et plongez d'une traite vers Montchavin. En moins de 25 minutes, vous embarquez dans le mythique Vanoise Express pour explorer Les Arcs, sans jamais déchausser ni prendre de navette routière.",
                 equip_tag: "Confort & Prestations", equip_title: "Équipements & Couchages (5 personnes)",
                 bed_title: "Couchages (5 couchages)", bed_desc: "Coin cabine isolé avec 2 lits superposés et grand tiroir de rangement. Séjour avec 1 lit gigogne (2 places) + 1 lit simple. Literie récente, oreillers et vraies couettes individuelles. Location de draps et serviettes possible via la conciergerie locale.",
                 cook_title: "Cuisine tout équipée", cook_desc: "Lave-vaisselle, micro-ondes, grand réfrigérateur, plaques de cuisson. Deux cafetières : à dosettes Senseo + électrique filtre traditionnelle n°4.",
@@ -394,6 +415,12 @@
                 contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler"
             },
             en: {
+                arcs_tag: "One of the largest ski areas in the world", 
+                arcs_title: "Paradiski: 425 km of slopes right from your door",
+                domain_peaks_title: "Direct access to La Plagne's best peaks",
+                domain_peaks_desc: "Belle Plagne (2050m) is the beating heart of the resort. The central gondola instantly brings you up to the guaranteed snow of Roche de Mio (2,730 m) and the glacier. You can also quickly access Grande Rochette (2,505 m) to carve down the best slopes with a 360° Alpine panorama, without long transit times.",
+                domain_arcs_title: "Express connection to Les Arcs",
+                arcs_desc: "This is the most strategic starting point in the valley: ski right from the building door to the Arpette chairlift, then cruise all the way down to Montchavin. In under 25 minutes, you board the legendary Vanoise Express to explore Les Arcs, without ever taking your skis off or riding a bus.",
                 badge_cristaux: "❄️ Paradiski Label: 4 Crystals / 5",
                 badge_etoiles: "Furnished Tourism 2★",
                 hero_title: "Your high-altitude cocoon on the slopes",
@@ -404,8 +431,6 @@
                 stat_ski_label: "Ski slopes", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out door",
                 stat_park_label: "Covered parking", stat_park_val: "100% Sheltered", stat_park_sub: "Direct corridor 100 m",
                 stat_alt_label: "Altitude", stat_alt_val: "2,050 m", stat_alt_sub: "Car-free resort",
-                arcs_tag: "Paradiski Hub", arcs_title: "Fastest access to Les Arcs",
-                arcs_desc: "From Belle Plagne, ski down straight to the Arpette high-speed chairlift. At the summit, cruise down to Montchavin to board the Vanoise Express: in under 25 minutes, you are skiing in Les Arcs without taking any shuttle bus.",
                 equip_tag: "Comfort & Amenities", equip_title: "Amenities & Sleeping (5 guests)",
                 bed_title: "Beds (5 beds)", bed_desc: "Separate mountain cabin with 2 bunk beds and storage drawer. Living room with 1 trundle bed (sleeps 2) + 1 single bed. Recent bedding, pillows and individual duvets. Sheet and towel hire available via local concierge.",
                 cook_title: "Fully equipped kitchen", cook_desc: "Dishwasher, microwave, large fridge, stovetop. Two coffee makers: Senseo pod machine + traditional filter machine #4.",
@@ -426,6 +451,12 @@
                 contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call"
             },
             nl: {
+                arcs_tag: "Een van de grootste skigebieden ter wereld", 
+                arcs_title: "Paradiski: 425 km pistes vanaf de voordeur",
+                domain_peaks_title: "Directe toegang tot de toppen van La Plagne",
+                domain_peaks_desc: "Belle Plagne (2050m) is het kloppende hart van het skigebied. De centrale kabelbaan brengt u direct naar de sneeuwzekere Roche de Mio (2.730 m) en de gletsjer. Of ski net zo snel naar Grande Rochette (2.505 m) voor de mooiste afdalingen met een 360° Alpenpanorama, zonder lange verbindingstijden.",
+                domain_arcs_title: "Snelle verbinding naar Les Arcs",
+                arcs_desc: "Dit is het meest strategische startpunt van het gebied: doe uw ski's aan voor het gebouw, neem de Arpette-lift en daal in één keer af naar Montchavin. In minder dan 25 minuten stapt u in de legendarische Vanoise Express om Les Arcs te verkennen, zonder de ski's uit te doen of een bus te nemen.",
                 badge_cristaux: "❄️ Paradiski-label: 4 Kristallen / 5",
                 badge_etoiles: "Toeristische accommodatie 2★",
                 hero_title: "Uw bergcocon direct aan de piste",
@@ -436,8 +467,6 @@
                 stat_ski_label: "Skipistes", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out deur",
                 stat_park_label: "Overdekte parking", stat_park_val: "100% Overdekt", stat_park_sub: "Directe gang 100 m",
                 stat_alt_label: "Hoogte", stat_alt_val: "2.050 m", stat_alt_sub: "Autovrij dorp",
-                arcs_tag: "Paradiski Knooppunt", arcs_title: "Snelste verbinding naar Les Arcs",
-                arcs_desc: "Vanaf Belle Plagne skiet u direct naar de Arpette-stoeltjeslift. Vanaf de top daalt u af naar Montchavin voor de Vanoise Express: in minder dan 25 minuten skiet u in Les Arcs zonder bus.",
                 equip_tag: "Comfort & Voorzieningen", equip_title: "Voorzieningen & Slapen (5 personen)",
                 bed_title: "Slapen (5 bedden)", bed_desc: "Afzonderlijke berghoek met 2 stapelbedden en opberglade. Woonkamer met uitschuifbed (2 pers.) + 1 eenpersoonsbed. Nieuw beddengoed, kussens en dekbedden. Lakenverhuur mogelijk via conciërge.",
                 cook_title: "Volledig ingerichte keuken", cook_desc: "Vaatwasser, magnetron, grote koelkast, kookplaat. Twee koffiezetapparaten: Senseo pads + traditionele filtermachine nr. 4.",
@@ -458,6 +487,12 @@
                 contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen"
             },
             de: {
+                arcs_tag: "Eines der größten Skigebiete der Welt", 
+                arcs_title: "Paradiski: 425 km Pisten direkt vor der Tür",
+                domain_peaks_title: "Direkter Zugang zu den Top-Gipfeln von La Plagne",
+                domain_peaks_desc: "Belle Plagne (2050m) ist das Herzstück des Skigebiets. Die zentrale Seilbahn bringt Sie sofort zur schneesicheren Roche de Mio (2.730 m) und zum Gletscher. Genauso schnell erreichen Sie die Grande Rochette (2.505 m) für die schönsten Abfahrten mit 360°-Alpenpanorama, ganz ohne lange Ziehwege.",
+                domain_arcs_title: "Express-Verbindung nach Les Arcs",
+                arcs_desc: "Dies ist der strategisch beste Startpunkt: Skier vor dem Haus anschnallen, den Arpette-Sessellift nehmen und in einem Zug nach Montchavin abfahren. In weniger als 25 Minuten steigen Sie in den legendären Vanoise Express, um Les Arcs zu erkunden – ohne jemals die Skier abzuschnallen oder einen Bus zu nehmen.",
                 badge_cristaux: "❄️ Paradiski-Label: 4 Kristalle / 5",
                 badge_etoiles: "Klassifizierte Ferienwohnung 2★",
                 hero_title: "Ihr Bergkokon direkt an der Skipiste",
@@ -468,8 +503,6 @@
                 stat_ski_label: "Skipisten", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out Tür",
                 stat_park_label: "Tiefgarage", stat_park_val: "100% Überdacht", stat_park_sub: "Direkter Gang 100 m",
                 stat_alt_label: "Höhe", stat_alt_val: "2.050 m", stat_alt_sub: "Autofreier Ort",
-                arcs_tag: "Paradiski Drehkreuz", arcs_title: "Schnellste Verbindung nach Les Arcs",
-                arcs_desc: "Fahren Sie von Belle Plagne direkt mit den Skiern zur Arpette-Sesselbahn. Von oben geht es direkt nach Montchavin zum Vanoise Express: in unter 25 Minuten Skifahren in Les Arcs ganz ohne Bus.",
                 equip_tag: "Komfort & Ausstattung", equip_title: "Ausstattung & Schlafen (5 Personen)",
                 bed_title: "Schlafen (5 Betten)", bed_desc: "Separate Schlafkabine mit 2 Etagenbetten und Schublade. Wohnbereich mit Ausziehbett (2 Pers.) + 1 Einzelbett. Neue Betten, Kissen und Daunendecken. Bettwäscheverleih über Concierge möglich.",
                 cook_title: "Voll ausgestattete Küche", cook_desc: "Geschirrspüler, Mikrowelle, großer Kühlschrank, Herd. Zwei Kaffeemaschinen: Senseo-Pads + klassische Filtermaschine Nr. 4.",
