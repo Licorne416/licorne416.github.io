@@ -215,10 +215,10 @@
                     <!-- Filtres par catégorie -->
                     <div class="flex flex-wrap gap-1.5 text-xs font-bold" id="gallery-filters">
                         <button onclick="filterGallery('all')" class="gallery-tab px-3 py-1.5 rounded-xl bg-amber-500 text-[#1b2b48] transition">Toutes</button>
-                        <button onclick="filterGallery('salon')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Séjour & Balcon</button>
-                        <button onclick="filterGallery('couchages')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Couchages</button>
-                        <button onclick="filterGallery('cuisine')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Cuisine</button>
-                        <button onclick="filterGallery('station')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Pistes & Station</button>
+                        <button onclick="filterGallery('salon & terrasse')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Séjour & Terrasse</button>
+                        <button onclick="filterGallery('entrée & coin montagne')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">entrée & coin montagne</button>
+                        <button onclick="filterGallery('cuisine & salle de bains')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Cuisine & salle de bains</button>
+                        <button onclick="filterGallery('résidence & station')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Résidences & Station</button>
                     </div>
                 </div>
 
@@ -368,32 +368,38 @@
     <script>
         // LISTE ORDONNÉE DE TES PHOTOS
         // Modifie l'ordre de ces lignes pour changer l'ordre d'affichage sur le site.
-        // Les catégories possibles sont : 'salon', 'couchages', 'cuisine', 'station'.
-        const PHOTOS = [
+        // Les catégories possibles sont : 'salon', 'entrée & coin montagne', 'cuisine', 'station'.
+       const PHOTOS = [
             // --- SÉJOUR & BALCON ---
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "salon", titre: "Séjour lumineux avec coin repas et balcon" },
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "salon", titre: "Pièce à vivre avec TV écran plat" },
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "salon", titre: "Vue dégagée sur les montagnes depuis le balcon" },
+            { src: "images/salon/3.jpg", cat: "salon & terrasse", titre: "Vue dégagée plein sud" },
+            { src: "images/salon/2.jpg", cat: "salon & terrasse", titre: "Séjour ensoleillé avec TV écran plat" },
+           { src: "images/salon/1.jpg", cat: "salon & terrasse", titre: "Double canapé" },
+           { src: "images/salon/4.jpg", cat: "salon & terrasse", titre: "Coucher de soleil sur les montagnes" },
+           { src: "images/salon/22.jpg", cat: "salon & terrasse", titre: "Table à manger" },
+           { src: "images/salon/11.jpg", cat: "salon & terrasse", titre: "Vue montagne" },
+           { src: "images/salon/12.jpg", cat: "salon & terrasse", titre: "Vue domaine" },
+           { src: "images/salon/9.jpg", cat: "salon & terrasse", titre: "Coin apéro" },
 
-            // --- COUCHAGES ---
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "couchages", titre: "Coin cabine isolé avec lits superposés" },
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "couchages", titre: "Lits gigognes du séjour avec couettes individuelles" },
+            // --- ENTREE ET COIN MONTAGNE ---
+            { src: "images/entrée & coin montagne/13.jpg", cat: "entrée & coin montagne", titre: "Coin cabine avec lits superposés" },
+            { src: "images/entrée & coin montagne/15.jpg", cat: "entrée & coin montagne", titre: "Entrée" },
+           { src: "images/entrée & coin montagne/14.jpg", cat: "entrée & coin montagne", titre: "Vue montagne depuis coin montagne" },
 
-            // --- CUISINE & CONVIVIALITÉ ---
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "cuisine", titre: "Cuisine équipée avec lave-vaisselle et micro-ondes" },
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "cuisine", titre: "Cafetières Senseo & filtre traditionnelle" },
-            { src: "Screenshot 2026-07-30 22.41.58.png", cat: "cuisine", titre: "Appareils à raclette, fondue et jeux de société" },
+            // --- CUISINE & SALLE DE BAINS---
+           { src: "images/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Salle de bains" },
+            { src: "images/cuisine/5.jpg", cat: "cuisine & sdb", titre: "Cuisine équipée et lave-vaisselle" },
+            { src: "images/cuisine/6.jpg", cat: "cuisine & sdb", titre: "Vaisselle dispo 1" },
+            { src: "images/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Vaiselle dispo 2" },
 
             // --- STATION & PISTES ---
-            { src: "Belle_Plagne_Print_40x50cm_300dp.png", cat: "station", titre: "Station piétonne de Belle Plagne à 2050 m" },
-            { src: "Belle_Plagne_Print_40x50cm_300dp.png", cat: "station", titre: "Départ skis aux pieds au pied de la résidence" },
-            { src: "Belle_Plagne_Print_40x50cm_300dp.png", cat: "station", titre: "Casier à skis privatif avec sèche-chaussures" },
-            { src: "Belle_Plagne_Print_40x50cm_300dp.png", cat: "station", titre: "Accès couvert depuis le parking souterrain" }
-            
-            // Pour ajouter tes autres photos plus tard, ajoute simplement une ligne ici :
-            // { src: "images/salon/ma_photo.jpg", cat: "salon", titre: "Description" },
+            { src: "images/résidence & station/16.jpg", cat: "résidence & station", titre: "Hall casier à ski" },
+            { src: "images/résidence & station/17.jpg", cat: "résidence & station", titre: "Casier à ski privatif avec sèche-chaussures" },
+            { src: "images/résidence & station/18.jpg", cat: "résidence & station", titre: "Sèche-chaussures chauffant" },
+            { src: "images/résidence & station/10.jpg", cat: "résidence & station", titre: "Résidence" },
+            { src: "images/résidence & station/19.jpg", cat: "résidence & station", titre: "Départ rando" },
+            { src: "images/résidence & station/20.jpg", cat: "résidence & station", titre: "Lac des blanchets" },
+            { src: "images/résidence & station/21.jpg", cat: "résidence & station", titre: "BellePlagne depuis Blanchet" }
         ];
-
         // Rendu dynamique de la galerie
         function renderGallery(filter = 'all') {
             const grid = document.getElementById('gallery-grid');
