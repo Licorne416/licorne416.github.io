@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licorne 416 • Belle Plagne | Appartement 4 Cristaux Paradiski Skis aux Pieds</title>
+    <title>Licorne 416 • Belle Plagne | Appartement 4 Cristaux Paradiski</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -27,7 +27,7 @@
         }
 
         .glass-card-dark {
-            background: rgba(27, 43, 72, 0.95);
+            background: rgba(27, 43, 72, 0.94);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(245, 158, 11, 0.25);
@@ -43,14 +43,15 @@
 </head>
 <body class="bg-poster min-h-screen relative antialiased flex flex-col justify-between">
 
-    <!-- Voile sombre de confort et lisibilité -->
-    <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-[2px] z-0 pointer-events-none"></div>
+    <!-- Voile sombre identique au site voyageur -->
+    <div class="fixed inset-0 bg-slate-950/60 backdrop-blur-[2px] z-0 pointer-events-none"></div>
 
     <div class="relative z-10 flex-grow pb-16">
 
-        <!-- HEADER NAVIGATION -->
+        <!-- HEADER NAVIGATION AVEC SÉLECTEUR 4 LANGUES -->
         <header class="sticky top-0 z-50 bg-[#1b2b48]/95 backdrop-blur-md border-b border-amber-500/30 text-white shadow-2xl">
-            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+                
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-[#c86d2a] p-0.5 shadow-md shrink-0">
                         <div class="w-full h-full bg-[#1b2b48] rounded-[10px] flex items-center justify-center font-bold text-amber-300">
@@ -59,370 +60,512 @@
                     </div>
                     <div>
                         <h1 class="font-bold text-base sm:text-lg text-white leading-tight tracking-wide font-serif-title">LICORNE 416</h1>
-                        <p class="text-[10px] text-amber-300/80 font-semibold uppercase tracking-widest">Belle Plagne • 2050 m • Paradiski</p>
+                        <p class="text-[10px] text-amber-300/80 font-semibold uppercase tracking-widest">Belle Plagne • 2050 m</p>
                     </div>
                 </div>
 
-                <nav class="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-300">
-                    <a href="#appartement" class="hover:text-amber-400 transition">Le Logement</a>
-                    <a href="#atouts" class="hover:text-amber-400 transition">Atouts Glisse</a>
-                    <a href="#galerie" class="hover:text-amber-400 transition">Photos</a>
-                    <a href="#faq" class="hover:text-amber-400 transition">Infos Pratiques</a>
-                </nav>
+                <!-- Sélecteur de langue dynamique -->
+                <div class="flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-amber-500/30 text-xs">
+                    <button onclick="setLanguage('fr')" id="lang-fr" class="lang-btn px-2.5 py-1 rounded-lg font-bold transition bg-amber-500 text-[#1b2b48]">🇫🇷 FR</button>
+                    <button onclick="setLanguage('en')" id="lang-en" class="lang-btn px-2.5 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-white/10">🇬🇧 EN</button>
+                    <button onclick="setLanguage('nl')" id="lang-nl" class="lang-btn px-2.5 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-white/10">🇳🇱 NL</button>
+                    <button onclick="setLanguage('de')" id="lang-de" class="lang-btn px-2.5 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-white/10">🇩🇪 DE</button>
+                </div>
 
-                <a href="#reserver" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl shadow-lg transition active:scale-95">
-                    Disponibilités & Tarifs
-                </a>
             </div>
         </header>
 
-        <main class="max-w-5xl mx-auto px-4 pt-8 space-y-12">
+        <!-- CONTENEUR PRINCIPAL CALIBRÉ EXACTEMENT SUR LE SITE 1 -->
+        <main class="max-w-4xl mx-auto px-3 sm:px-6 pt-6 space-y-6">
 
-            <!-- HERO & BANNIÈRE OFFICIELLE -->
-            <section class="glass-card-dark rounded-3xl p-4 sm:p-8 text-white shadow-2xl border border-amber-500/20 text-center space-y-6">
+            <!-- BANNIÈRE HERO -->
+            <div class="glass-card-dark rounded-3xl p-4 sm:p-6 text-white shadow-2xl relative overflow-hidden text-center space-y-4">
                 
-                <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-lg group max-w-4xl mx-auto">
-                    <img src="Screenshot 2026-07-30 22.41.58.png" alt="Licorne 416 Belle Plagne" class="w-full h-auto block group-hover:scale-105 transition duration-700">
+                <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-lg group">
+                    <img src="Screenshot 2026-07-30 22.41.58.png" alt="Licorne 416 Banner" class="w-full h-auto block group-hover:scale-105 transition duration-700">
                 </div>
-
-                <div class="space-y-4 max-w-3xl mx-auto">
-                    
-                    <!-- BADGE 4 CRISTAUX PARADISKI MIS EN VALEUR -->
-                    <div class="flex flex-wrap items-center justify-center gap-2.5">
-                        <span class="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5">
-                            <span>❄️</span> Label Paradiski : 4 Cristaux / 5
+                
+                <div class="pt-2 text-center space-y-3">
+                    <div class="flex flex-wrap items-center justify-center gap-2">
+                        <span class="px-3.5 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 text-[#1b2b48] font-black text-xs rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5" data-i18n="badge_cristaux">
+                            ❄️ Label Paradiski : 4 Cristaux / 5
                         </span>
-                        <span class="px-3 py-1 bg-white/10 text-slate-300 text-xs rounded-full border border-white/20">
+                        <span class="px-3 py-1 bg-white/10 text-slate-300 font-semibold text-xs rounded-full border border-white/20" data-i18n="badge_etoiles">
                             Meublé de Tourisme 2★
                         </span>
-                        <span class="px-3 py-1 bg-white/10 text-amber-300 font-semibold text-xs rounded-full border border-amber-400/30">
-                            Belle Plagne • 4ᵉ Étage avec Ascenseur
-                        </span>
                     </div>
 
-                    <h2 class="text-3xl sm:text-5xl font-black uppercase text-amber-400 font-serif-title tracking-tight leading-tight">
+                    <h2 class="text-2xl sm:text-4xl font-black uppercase text-amber-400 font-serif-title tracking-tight" data-i18n="hero_title">
                         Votre cocon d'altitude skis aux pieds
                     </h2>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify sm:text-center">
-                        À 2 050 m d'altitude au cœur de la station piétonne de Belle Plagne, profitez d'un appartement de 23 m² parfaitement agencé pour 5 personnes. Accès direct couvert depuis le parking souterrain et départ skis aux pieds sur l'immense domaine Paradiski.
+                    
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto" data-i18n="hero_desc">
+                        Niché à 2 050 m au cœur de la station piétonne de Belle Plagne, appartement 23 m² pour 5 personnes avec accès direct couvert depuis le parking et départ skis aux pieds sur le domaine Paradiski.
                     </p>
 
-                    <div class="flex flex-wrap justify-center gap-3 pt-2">
-                        <a href="#reserver" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs sm:text-sm uppercase tracking-wide px-6 py-3.5 rounded-2xl shadow-xl transition active:scale-95">
-                            Voir les disponibilités & réserver
+                    <div class="flex flex-wrap justify-center gap-3 pt-1">
+                        <a href="#reserver" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs sm:text-sm uppercase tracking-wide px-6 py-3 rounded-2xl shadow-lg transition active:scale-95" data-i18n="btn_book_now">
+                            Disponibilités & Tarifs
                         </a>
-                        <a href="#galerie" class="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-2xl border border-white/20 transition">
-                            Visiter en photos
+                        <a href="#galerie" class="bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-2xl border border-white/20 transition" data-i18n="btn_see_photos">
+                            Voir les photos
                         </a>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- FICHE SIGNALÉTIQUE & CHIFFRES CLÉS -->
-            <section class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div class="glass-card-dark p-4 rounded-2xl border border-amber-500/20 text-center">
-                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Capacité</p>
-                    <p class="text-lg font-black text-white">5 Couchages</p>
-                    <p class="text-[11px] text-slate-300">23 m² optimisés</p>
+            <!-- 4 CHIFFRES CLÉS -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div class="glass-card-dark p-3.5 rounded-2xl border border-amber-500/20 text-center">
+                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider" data-i18n="stat_cap_label">Capacité</p>
+                    <p class="text-base sm:text-lg font-black text-white" data-i18n="stat_cap_val">5 Couchages</p>
+                    <p class="text-[11px] text-slate-400" data-i18n="stat_cap_sub">23 m² optimisés</p>
                 </div>
-                <div class="glass-card-dark p-4 rounded-2xl border border-amber-500/20 text-center">
-                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Accès Pistes</p>
-                    <p class="text-lg font-black text-white">0 Mètre</p>
-                    <p class="text-[11px] text-slate-300">Porte RDC sur la piste</p>
+                <div class="glass-card-dark p-3.5 rounded-2xl border border-amber-500/20 text-center">
+                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider" data-i18n="stat_ski_label">Pistes de ski</p>
+                    <p class="text-base sm:text-lg font-black text-white" data-i18n="stat_ski_val">0 Mètre</p>
+                    <p class="text-[11px] text-slate-400" data-i18n="stat_ski_sub">Porte RDC sur piste</p>
                 </div>
-                <div class="glass-card-dark p-4 rounded-2xl border border-amber-500/20 text-center">
-                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Parking couvert</p>
-                    <p class="text-lg font-black text-white">Accès 100% abrité</p>
-                    <p class="text-[11px] text-slate-300">100 m par coursive</p>
+                <div class="glass-card-dark p-3.5 rounded-2xl border border-amber-500/20 text-center">
+                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider" data-i18n="stat_park_label">Parking couvert</p>
+                    <p class="text-base sm:text-lg font-black text-white" data-i18n="stat_park_val">100% Abrité</p>
+                    <p class="text-[11px] text-slate-400" data-i18n="stat_park_sub">Coursive directe 100 m</p>
                 </div>
-                <div class="glass-card-dark p-4 rounded-2xl border border-amber-500/20 text-center">
-                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Enneigement</p>
-                    <p class="text-lg font-black text-white">2 050 m</p>
-                    <p class="text-[11px] text-slate-300">Station d'altitude piétonne</p>
+                <div class="glass-card-dark p-3.5 rounded-2xl border border-amber-500/20 text-center">
+                    <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider" data-i18n="stat_alt_label">Altitude</p>
+                    <p class="text-base sm:text-lg font-black text-white" data-i18n="stat_alt_val">2 050 m</p>
+                    <p class="text-[11px] text-slate-400" data-i18n="stat_alt_sub">Station piétonne</p>
                 </div>
-            </section>
+            </div>
 
-            <!-- ATOUT GLISSE : LIAISON EXPRESS VERS LES ARCS -->
-            <section id="atouts" class="glass-card-dark rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-amber-500/20 space-y-4">
+            <!-- ATOUT LIAISON LES ARCS -->
+            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-xl border border-amber-500/20 space-y-2.5">
                 <div class="flex items-center gap-3 border-b border-amber-500/20 pb-3">
                     <span class="text-2xl p-2 bg-amber-500/20 rounded-xl text-amber-400">🎿</span>
                     <div>
-                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Domaine Paradiski</span>
-                        <h3 class="text-xl font-black text-white uppercase">Le meilleur carrefour vers Les Arcs</h3>
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block" data-i18n="arcs_tag">Carrefour Paradiski</span>
+                        <h3 class="text-lg sm:text-xl font-black text-white" data-i18n="arcs_title">L'accès le plus rapide vers Les Arcs</h3>
                     </div>
                 </div>
-                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify">
-                    Belle Plagne est le secteur de toute la station qui offre la liaison la plus directe et rapide vers Les Arcs : en chaussant vos skis au pied de l'immeuble, vous glissez directement vers le <strong>télésiège débrayable de l'Arpette</strong>. Du sommet, vous basculez d'une seule traite en descente continue vers Montchavin-Les Coches pour embarquer dans le <strong>Vanoise Express</strong>. En moins de 25 minutes chrono skis aux pieds, vous skiez sur Les Arcs sans prendre aucun bus routier.
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed text-justify" data-i18n="arcs_desc">
+                    Depuis Belle Plagne, descendez directement à skis jusqu'au télésiège débrayable de l'Arpette. Du sommet, basculez d'une seule traite sur les pistes de Montchavin jusqu'au Vanoise Express : en moins de 25 minutes, vous skiez sur Les Arcs sans prendre aucun bus.
                 </p>
-            </section>
+            </div>
 
-            <!-- DESCRIPTIF DES ÉQUIPEMENTS & COUCHAGES -->
-            <section id="appartement" class="glass-card rounded-3xl p-6 sm:p-10 text-slate-800 shadow-xl space-y-6">
+            <!-- DÉTAILS ÉQUIPEMENTS & COUCHAGES -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-5">
                 <div class="flex items-center gap-3 border-b border-amber-900/10 pb-4">
-                    <span class="text-3xl p-2.5 bg-amber-100 rounded-2xl border border-amber-200">✨</span>
+                    <span class="text-3xl p-2 bg-amber-100 rounded-2xl border border-amber-200">✨</span>
                     <div>
-                        <span class="text-[10px] font-black text-[#c86d2a] uppercase tracking-widest block">Descriptif détaillé</span>
-                        <h3 class="text-xl sm:text-2xl font-black text-[#1b2b48]">Équipements & Couchages (5 Personnes)</h3>
+                        <span class="text-[10px] font-black text-[#c86d2a] uppercase tracking-widest block" data-i18n="equip_tag">Confort & Prestations</span>
+                        <h3 class="text-xl sm:text-2xl font-black text-[#1b2b48]" data-i18n="equip_title">Équipements & Couchages (5 personnes)</h3>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
                     <div class="p-4 rounded-2xl bg-white/80 border border-amber-900/10 space-y-2">
-                        <p class="font-black text-[#1b2b48] flex items-center gap-2"><span>🛏️</span> Espace Couchages (5 personnes)</p>
-                        <ul class="text-slate-600 space-y-1 list-disc list-inside">
-                            <li><strong>Coin montagne isolé :</strong> 2 lits superposés avec tiroir de rangement sous lit.</li>
-                            <li><strong>Séjour :</strong> 1 lit gigogne (2 places) + 1 lit simple.</li>
-                            <li><strong>Confort de nuit :</strong> literie récente, oreillers et <strong>vraies couettes individuelles</strong> douillettes (pas de vieilles couvertures).</li>
-                            <li><strong>Option linge :</strong> location de kits draps et serviettes livrés à l'appartement via la conciergerie locale.</li>
-                        </ul>
-                    </div>
-
-                    <div class="p-4 rounded-2xl bg-white/80 border border-amber-900/10 space-y-2">
-                        <p class="font-black text-[#1b2b48] flex items-center gap-2"><span>🍳</span> Cuisine tout équipée</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Lave-vaisselle, micro-ondes, grand réfrigérateur, plaques vitrocéramiques. 
-                            <strong>Pour le café :</strong> cafetière à dosettes Senseo + cafetière électrique filtre traditionnelle (filtres n°4).
+                        <p class="font-black text-[#1b2b48] flex items-center gap-2">
+                            <span>🛏️</span> <span data-i18n="bed_title">Couchages (5 couchages)</span>
+                        </p>
+                        <p class="text-slate-700 leading-relaxed" data-i18n="bed_desc">
+                            Coin cabine isolé avec 2 lits superposés et grand tiroir de rangement. Séjour avec 1 lit gigogne (2 places) + 1 lit simple. Literie récente, oreillers et vraies couettes individuelles. Location de draps et serviettes possible via la conciergerie locale.
                         </p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-white/80 border border-amber-900/10 space-y-2">
-                        <p class="font-black text-[#1b2b48] flex items-center gap-2"><span>🧀</span> Convivialité & Détente</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Appareil à fondue, appareil à raclette et jeux de société à disposition dans les placards pour de superbes soirées. TV écran plat dans le séjour (pas de Wi-Fi privé, très bonne couverture 4G/5G).
+                        <p class="font-black text-[#1b2b48] flex items-center gap-2">
+                            <span>🍳</span> <span data-i18n="cook_title">Cuisine tout équipée</span>
+                        </p>
+                        <p class="text-slate-700 leading-relaxed" data-i18n="cook_desc">
+                            Lave-vaisselle, micro-ondes, grand réfrigérateur, plaques de cuisson. Deux cafetières : à dosettes Senseo + électrique filtre traditionnelle n°4.
                         </p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-white/80 border border-amber-900/10 space-y-2">
-                        <p class="font-black text-[#1b2b48] flex items-center gap-2"><span>🔥</span> Casier chauffé & Balcon</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Casier à skis privatif en RDC équipé d'un <strong>sèche-chaussures électrique</strong> pour des boots sèches et chaudes chaque matin. Balcon privatif avec vue dégagée sur les sommets.
+                        <p class="font-black text-[#1b2b48] flex items-center gap-2">
+                            <span>🧀</span> <span data-i18n="cozy_title">Convivialité & Détente</span>
+                        </p>
+                        <p class="text-slate-700 leading-relaxed" data-i18n="cozy_desc">
+                            Appareil à raclette, appareil à fondue et jeux de société à disposition dans les placards. TV écran plat dans le séjour (pas de Wi-Fi privé, très bonne 4G/5G).
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/80 border border-amber-900/10 space-y-2">
+                        <p class="font-black text-[#1b2b48] flex items-center gap-2">
+                            <span>🔥</span> <span data-i18n="ski_title">Casier chauffé & Balcon</span>
+                        </p>
+                        <p class="text-slate-700 leading-relaxed" data-i18n="ski_desc">
+                            Casier à skis privatif en RDC avec sèche-chaussures électrique pour des chaussures chaudes chaque matin. Balcon avec vue dégagée sur les montagnes.
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- GALERIE PHOTOS PAR CATÉGORIES -->
-            <section id="galerie" class="glass-card-dark rounded-3xl p-6 sm:p-8 text-white shadow-2xl border border-amber-500/20 space-y-6">
-                <div class="flex items-center justify-between flex-wrap gap-4 border-b border-amber-500/20 pb-4">
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl p-2 bg-amber-500/20 rounded-xl text-amber-400">📸</span>
-                        <div>
-                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Visite virtuelle</span>
-                            <h3 class="text-xl font-black text-white uppercase">Galerie Photos</h3>
-                        </div>
+            <!-- GALERIE PHOTOS AVEC ONGLETS PAR DOSSIERS GITHUB -->
+            <div id="galerie" class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-2xl border border-amber-500/20 space-y-5">
+                <div class="flex items-center justify-between flex-wrap gap-3 border-b border-amber-500/20 pb-3">
+                    <div class="flex items-center gap-2.5">
+                        <span class="text-2xl p-1.5 bg-amber-500/20 rounded-xl text-amber-400">📸</span>
+                        <h3 class="text-lg sm:text-xl font-black text-white uppercase" data-i18n="gal_title">Galerie Photos</h3>
                     </div>
 
-                    <!-- Filtres par catégorie -->
+                    <!-- Filtres calqués sur tes dossiers GitHub -->
                     <div class="flex flex-wrap gap-1.5 text-xs font-bold" id="gallery-filters">
-                        <button onclick="filterGallery('all')" class="gallery-tab px-3 py-1.5 rounded-xl bg-amber-500 text-[#1b2b48] transition">Toutes</button>
-                        <button onclick="filterGallery('salon & terrasse')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Séjour & Terrasse</button>
-                        <button onclick="filterGallery('entrée & coin montagne')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">entrée & coin montagne</button>
-                        <button onclick="filterGallery('cuisine & salle de bains')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Cuisine & salle de bains</button>
-                        <button onclick="filterGallery('résidence & station')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition">Résidences & Station</button>
+                        <button onclick="filterGallery('all')" class="gallery-tab px-3 py-1.5 rounded-xl bg-amber-500 text-[#1b2b48] transition" data-i18n="tab_all">Toutes</button>
+                        <button onclick="filterGallery('salon')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition" data-i18n="tab_salon">Salon & Terrasse</button>
+                        <button onclick="filterGallery('couchages')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition" data-i18n="tab_couchages">Entrée & Coin montagne</button>
+                        <button onclick="filterGallery('cuisine')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition" data-i18n="tab_cuisine">Cuisine</button>
+                        <button onclick="filterGallery('station')" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition" data-i18n="tab_station">Résidence & Station</button>
                     </div>
                 </div>
 
-                <!-- Grille remplie dynamiquement par le tableau JavaScript PHOTOS -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="gallery-grid"></div>
-            </section>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5" id="gallery-grid"></div>
+            </div>
 
-            <!-- LIGHTBOX PLEIN ÉCRAN -->
+            <!-- VISIONNEUSE PLEIN ÉCRAN (LIGHTBOX) -->
             <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeLightbox()">
                 <button class="absolute top-4 right-4 text-white text-3xl font-black p-2 hover:text-amber-400 transition" onclick="closeLightbox()">×</button>
                 <div class="max-w-4xl max-h-[85vh] text-center space-y-3" onclick="event.stopPropagation()">
                     <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto mx-auto rounded-2xl border border-white/20 shadow-2xl">
-                    <p id="lightbox-caption" class="text-sm text-slate-300 font-semibold"></p>
+                    <p id="lightbox-caption" class="text-xs sm:text-sm text-slate-300 font-semibold"></p>
                 </div>
             </div>
 
-            <!-- MODULE DE RÉSERVATION (PLAGNE RESORT EN 1, ABRITEL EN 2, AIRBNB EN 3) -->
-            <section id="reserver" class="space-y-6">
-                <div class="text-center space-y-2">
-                    <span class="text-xs font-black text-amber-400 uppercase tracking-widest">Réservation directe & partenaires</span>
-                    <h3 class="text-2xl sm:text-4xl font-black uppercase text-white font-serif-title">Réservez votre séjour</h3>
-                    <p class="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto">
-                        Consultez les disponibilités en temps réel sur la plateforme de votre choix :
-                    </p>
+            <!-- MODULE RÉSERVATION : 1. PLAGNE RESORT | 2. ABRITEL | 3. AIRBNB -->
+            <div id="reserver" class="space-y-4">
+                <div class="text-center space-y-1">
+                    <span class="text-xs font-black text-amber-400 uppercase tracking-widest" data-i18n="book_tag">Réservations Directes</span>
+                    <h3 class="text-xl sm:text-2xl font-black uppercase text-white font-serif-title" data-i18n="book_title">Disponibilités & Réservation</h3>
                 </div>
 
-                <!-- 1. PLAGNE RESORT EN TÊTE (MEILLEUR TARIF) -->
-                <div class="glass-card-dark rounded-3xl p-6 sm:p-8 text-white border-2 border-amber-400 shadow-2xl relative overflow-hidden space-y-4">
+                <!-- 1. PLAGNE RESORT EN VEDETTE -->
+                <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white border-2 border-amber-400 shadow-xl space-y-3">
                     <div class="flex items-center justify-between flex-wrap gap-2">
-                        <span class="px-3.5 py-1 bg-amber-500 text-slate-950 font-black text-[10px] sm:text-xs rounded-full uppercase tracking-wider">
+                        <span class="px-3 py-1 bg-amber-500 text-slate-950 font-black text-[10px] sm:text-xs rounded-full uppercase tracking-wider" data-i18n="pr_badge">
                             ⭐ Recommandé • Meilleur Tarif Garanti
                         </span>
-                        <span class="text-xs text-amber-300 font-bold">Centrale Officielle La Plagne</span>
+                        <span class="text-xs text-amber-300 font-bold" data-i18n="pr_label">Centrale Officielle La Plagne</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                        <div class="md:col-span-2 space-y-2">
-                            <h4 class="text-xl sm:text-2xl font-black text-white">Réservation directe via Plagne Resort</h4>
-                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                Réservez directement auprès de la centrale officielle de la station : profitez de tarifs sans surcoût intermédiaire et de réductions avantageuses sur vos forfaits de ski, cours ESF et location de matériel.
+                        <div class="md:col-span-2 space-y-1.5">
+                            <h4 class="text-lg sm:text-xl font-black text-white" data-i18n="pr_name">Plagne Resort</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pr_desc">
+                                Réservation en direct auprès de la station : profitez de tarifs avantageux et composez votre séjour avec forfaits de ski, cours ESF et matériel remisés.
                             </p>
                         </div>
                         <div class="text-center md:text-right">
-                            <a href="https://www.plagne-resort.com" target="_blank" rel="noopener" class="inline-block w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs sm:text-sm uppercase tracking-wider py-4 px-8 rounded-2xl shadow-xl transition active:scale-95">
-                                Voir sur Plagne Resort →
+                            <a href="https://www.plagne-resort.com" target="_blank" rel="noopener" class="inline-block w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs uppercase tracking-wider py-3.5 px-6 rounded-2xl shadow-lg transition active:scale-95" data-i18n="pr_btn">
+                                Réserver sur Plagne Resort →
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. ABRITEL ET 3. AIRBNB -->
+                <!-- 2. ABRITEL & 3. AIRBNB -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
-                    <!-- ABRITEL (EN SECOND) -->
-                    <div class="glass-card-dark rounded-3xl p-6 text-center space-y-4 border border-white/10 flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <div class="w-12 h-12 mx-auto rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-2xl font-black">
+                    <!-- ABRITEL -->
+                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl font-black">
                                 <i class="fas fa-home"></i>
                             </div>
-                            <h4 class="text-lg font-black text-white">Annonce Abritel / Vrbo</h4>
-                            <p class="text-xs text-slate-300">Garantie réservation famille en toute confiance et assistance 24/7.</p>
+                            <h4 class="text-base font-black text-white">Abritel / Vrbo</h4>
+                            <p class="text-xs text-slate-300" data-i18n="abritel_desc">Garantie réservation famille et assistance 24/7.</p>
                         </div>
-                        <a href="https://www.abritel.fr/location-vacances/p2725287?dateless=true" target="_blank" rel="noopener" class="block bg-[#1c4482] hover:bg-[#153465] text-white font-black text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow-md active:scale-95">
+                        <a href="https://www.abritel.fr/location-vacances/p2725287?dateless=true" target="_blank" rel="noopener" class="block bg-[#1c4482] hover:bg-[#153465] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="abritel_btn">
                             Voir sur Abritel →
                         </a>
                     </div>
 
-                    <!-- AIRBNB (EN TROISIÈME) -->
-                    <div class="glass-card-dark rounded-3xl p-6 text-center space-y-4 border border-white/10 flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <div class="w-12 h-12 mx-auto rounded-2xl bg-[#FF385C]/15 text-[#FF385C] flex items-center justify-center text-2xl font-black">
+                    <!-- AIRBNB -->
+                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-[#FF385C]/15 text-[#FF385C] flex items-center justify-center text-xl font-black">
                                 <i class="fab fa-airbnb"></i>
                             </div>
-                            <h4 class="text-lg font-black text-white">Annonce Airbnb</h4>
-                            <p class="text-xs text-slate-300">Paiement échelonné, protection AirCover et avis vérifiés.</p>
+                            <h4 class="text-base font-black text-white">Airbnb</h4>
+                            <p class="text-xs text-slate-300" data-i18n="airbnb_desc">Paiement échelonné et protection AirCover.</p>
                         </div>
-                        <a href="https://www.airbnb.fr/rooms/1731050533290118377?photo_id=2730873927" target="_blank" rel="noopener" class="block bg-[#FF385C] hover:bg-[#e0314f] text-white font-black text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow-md active:scale-95">
+                        <a href="https://www.airbnb.fr/rooms/1731050533290118377?photo_id=2730873927" target="_blank" rel="noopener" class="block bg-[#FF385C] hover:bg-[#e0314f] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="airbnb_btn">
                             Voir sur Airbnb →
                         </a>
                     </div>
 
                 </div>
-            </section>
+            </div>
 
-            <!-- INFOS PRATIQUES (PARKING COUVERT, CLÉS, CONCIERGERIE) -->
-            <section id="faq" class="glass-card rounded-3xl p-6 sm:p-10 text-slate-800 shadow-xl space-y-6">
-                <div class="border-b border-amber-900/10 pb-4">
-                    <span class="text-[10px] font-black text-[#c86d2a] uppercase tracking-widest block">Accès & Séjour</span>
-                    <h3 class="text-xl sm:text-2xl font-black text-[#1b2b48]">Tout savoir pour votre arrivée</h3>
+            <!-- INFOS PRATIQUES (ACCÈS COUVERT, CLÉS, TÉLÉCABINE) -->
+            <div id="faq" class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-4 text-slate-800">
+                <div class="border-b border-amber-900/10 pb-3">
+                    <span class="text-[10px] font-black text-[#c86d2a] uppercase tracking-widest block" data-i18n="faq_tag">Informations Utiles</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-[#1b2b48]" data-i18n="faq_title">Préparer votre arrivée</h3>
                 </div>
 
-                <div class="space-y-4 text-xs sm:text-sm text-slate-700">
+                <div class="space-y-3 text-xs sm:text-sm text-slate-700">
                     <div>
-                        <p class="font-bold text-[#1b2b48] mb-1">🚗 Accès voiture & Parking souterrain couvert</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Vous stationnez votre véhicule dans le parking souterrain amont. L'accès à l'immeuble et à l'appartement s'effectue ensuite par une <strong>coursive couverte et abritée à 100 m seulement</strong> : vous déchargez vos valises à température ambiante, sans marcher dans la neige ni affronter les intempéries extérieures. L'été, le stationnement sur le parking découvert est 100% gratuit.
+                        <p class="font-bold text-[#1b2b48] mb-1" data-i18n="faq_q1">🚗 Parking souterrain & accès 100% couvert</p>
+                        <p class="text-slate-600 leading-relaxed" data-i18n="faq_a1">
+                            Stationnement dans le parking souterrain amont. L'accès à l'immeuble se fait par une coursive fermée et chauffée à 100 m : déchargement des bagages sans marcher dans la neige. L'été, stationnement gratuit en extérieur.
                         </p>
                     </div>
                     <div class="border-t border-amber-900/10 pt-3">
-                        <p class="font-bold text-[#1b2b48] mb-1">🔑 Remise des clés flexible & arrivées tardives</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Deux options pour vous accueillir selon votre heure d'arrivée : récupération des clés en agence aux horaires d'ouverture, ou en <strong>totale autonomie 24h/24 via la boîte à clés sécurisée</strong> fixée directement sur la porte de l'appartement (idéal en cas de trafic ou d'arrivée tardive).
+                        <p class="font-bold text-[#1b2b48] mb-1" data-i18n="faq_q2">🔑 Remise des clés flexible & arrivées tardives</p>
+                        <p class="text-slate-600 leading-relaxed" data-i18n="faq_a2">
+                            Récupération des clés en agence ou en totale autonomie 24h/24 via boîte à clés sécurisée sur la porte de l'appartement.
                         </p>
                     </div>
                     <div class="border-t border-amber-900/10 pt-3">
-                        <p class="font-bold text-[#1b2b48] mb-1">🧺 Linge de lit & conciergerie locale</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Des couettes individuelles et oreillers récents sont fournis dans l'appartement. La conciergerie locale (Marie-France) propose la location de kits complets draps et serviettes livrés directement à l'appartement avant votre arrivée.
-                        </p>
-                    </div>
-                    <div class="border-t border-amber-900/10 pt-3">
-                        <p class="font-bold text-[#1b2b48] mb-1">🪂 Déplacements dans la station piétonne</p>
-                        <p class="text-slate-600 leading-relaxed">
-                            Belle Plagne est une station 100 % piétonne. Une télécabine gratuite relie Belle Plagne à Plagne Bellecôte 7j/7 de 9h00 à 23h30 sans interruption (accès immédiat aux commerces, restaurants et piscine extérieure chauffée).
+                        <p class="font-bold text-[#1b2b48] mb-1" data-i18n="faq_q3">🪂 Déplacements dans la station</p>
+                        <p class="text-slate-600 leading-relaxed" data-i18n="faq_a3">
+                            Belle Plagne est 100% piétonne. Une télécabine gratuite relie Plagne Bellecôte 7j/7 de 9h00 à 23h30 sans interruption.
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- CONTACT DIRECT -->
-            <section class="max-w-2xl mx-auto text-center">
-                <div class="glass-card-dark rounded-3xl p-6 border border-amber-500/20 space-y-3">
-                    <p class="text-xs text-amber-400 uppercase tracking-widest font-black">Une question sur le logement ?</p>
-                    <p class="text-xs text-slate-300">
-                        Jérôme reste à votre disposition par téléphone ou WhatsApp pour préparer votre séjour :
-                    </p>
-                    <div class="flex justify-center gap-3 pt-1">
-                        <a href="tel:+33678539732" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                            📞 Appeler
-                        </a>
-                        <a href="https://wa.me/33678539732" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                            💬 WhatsApp
-                        </a>
-                    </div>
+            <!-- CONTACT JÉRÔME -->
+            <div class="glass-card-dark rounded-3xl p-5 text-center border border-amber-500/20 space-y-2 text-white">
+                <p class="text-xs text-amber-400 uppercase tracking-widest font-black" data-i18n="contact_tag">Des questions sur le logement ?</p>
+                <p class="text-xs text-slate-300" data-i18n="contact_desc">Jérôme reste disponible par téléphone ou WhatsApp :</p>
+                <div class="flex justify-center gap-3 pt-1">
+                    <a href="tel:+33678539732" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5" data-i18n="btn_call">
+                        📞 Appeler
+                    </a>
+                    <a href="https://wa.me/33678539732" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                        💬 WhatsApp
+                    </a>
                 </div>
-            </section>
+            </div>
 
         </main>
 
-        <footer class="mt-12 text-center text-slate-400 text-xs">
+        <footer class="mt-8 text-center text-slate-400 text-xs">
             <p>© Jérôme POUTEAU • Licorne 416 • Belle Plagne</p>
         </footer>
 
     </div>
 
-    <!-- SCRIPT GALERIE ET LIGHTBOX (ORDRE & GESTION DES 23 PHOTOS) -->
+    <!-- SCRIPT MULTILINGUE & GALERIE PAR DOSSIERS -->
     <script>
-        // LISTE ORDONNÉE DE TES PHOTOS
-        // Modifie l'ordre de ces lignes pour changer l'ordre d'affichage sur le site.
-        // Les catégories possibles sont : 'salon', 'entrée & coin montagne', 'cuisine', 'station'.
-       const PHOTOS = [
+        // DICTIONNAIRES MULTILINGUES
+        const i18n = {
+            fr: {
+                badge_cristaux: "❄️ Label Paradiski : 4 Cristaux / 5",
+                badge_etoiles: "Meublé de Tourisme 2★",
+                hero_title: "Votre cocon d'altitude skis aux pieds",
+                hero_desc: "Niché à 2 050 m au cœur de la station piétonne de Belle Plagne, appartement 23 m² pour 5 personnes avec accès direct couvert depuis le parking et départ skis aux pieds sur le domaine Paradiski.",
+                btn_book_now: "Disponibilités & Tarifs",
+                btn_see_photos: "Voir les photos",
+                stat_cap_label: "Capacité", stat_cap_val: "5 Couchages", stat_cap_sub: "23 m² optimisés",
+                stat_ski_label: "Pistes de ski", stat_ski_val: "0 Mètre", stat_ski_sub: "Porte RDC sur piste",
+                stat_park_label: "Parking couvert", stat_park_val: "100% Abrité", stat_park_sub: "Coursive directe 100 m",
+                stat_alt_label: "Altitude", stat_alt_val: "2 050 m", stat_alt_sub: "Station piétonne",
+                arcs_tag: "Carrefour Paradiski", arcs_title: "L'accès le plus rapide vers Les Arcs",
+                arcs_desc: "Depuis Belle Plagne, descendez directement à skis jusqu'au télésiège débrayable de l'Arpette. Du sommet, basculez d'une seule traite sur les pistes de Montchavin jusqu'au Vanoise Express : en moins de 25 minutes, vous skiez sur Les Arcs sans prendre aucun bus.",
+                equip_tag: "Confort & Prestations", equip_title: "Équipements & Couchages (5 personnes)",
+                bed_title: "Couchages (5 couchages)", bed_desc: "Coin cabine isolé avec 2 lits superposés et grand tiroir de rangement. Séjour avec 1 lit gigogne (2 places) + 1 lit simple. Literie récente, oreillers et vraies couettes individuelles. Location de draps et serviettes possible via la conciergerie locale.",
+                cook_title: "Cuisine tout équipée", cook_desc: "Lave-vaisselle, micro-ondes, grand réfrigérateur, plaques de cuisson. Deux cafetières : à dosettes Senseo + électrique filtre traditionnelle n°4.",
+                cozy_title: "Convivialité & Détente", cozy_desc: "Appareil à raclette, appareil à fondue et jeux de société à disposition dans les placards. TV écran plat dans le séjour (pas de Wi-Fi privé, très bonne 4G/5G).",
+                ski_title: "Casier chauffé & Balcon", ski_desc: "Casier à skis privatif en RDC avec sèche-chaussures électrique pour des chaussures chaudes chaque matin. Balcon avec vue dégagée sur les montagnes.",
+                gal_title: "Galerie Photos",
+                tab_all: "Toutes", tab_salon: "Salon & Terrasse", tab_couchages: "Entrée & Coin montagne", tab_cuisine: "Cuisine", tab_station: "Résidence & Station",
+                book_tag: "Réservations Directes", book_title: "Disponibilités & Réservation",
+                pr_badge: "⭐ Recommandé • Meilleur Tarif Garanti", pr_label: "Centrale Officielle La Plagne", pr_name: "Plagne Resort",
+                pr_desc: "Réservation en direct auprès de la station : profitez de tarifs avantageux et composez votre séjour avec forfaits de ski, cours ESF et matériel remisés.",
+                pr_btn: "Réserver sur Plagne Resort →",
+                abritel_desc: "Garantie réservation famille et assistance 24/7.", abritel_btn: "Voir sur Abritel →",
+                airbnb_desc: "Paiement échelonné et protection AirCover.", airbnb_btn: "Voir sur Airbnb →",
+                faq_tag: "Informations Utiles", faq_title: "Préparer votre arrivée",
+                faq_q1: "🚗 Parking souterrain & accès 100% couvert", faq_a1: "Stationnement dans le parking souterrain amont. L'accès à l'immeuble se fait par une coursive fermée et chauffée à 100 m : déchargement des bagages sans marcher dans la neige. L'été, stationnement gratuit en extérieur.",
+                faq_q2: "🔑 Remise des clés flexible & arrivées tardives", faq_a2: "Récupération des clés en agence ou en totale autonomie 24h/24 via boîte à clés sécurisée sur la porte de l'appartement.",
+                faq_q3: "🪂 Déplacements dans la station", faq_a3: "Belle Plagne est 100% piétonne. Une télécabine gratuite relie Plagne Bellecôte 7j/7 de 9h00 à 23h30 sans interruption.",
+                contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler"
+            },
+            en: {
+                badge_cristaux: "❄️ Paradiski Label: 4 Crystals / 5",
+                badge_etoiles: "Furnished Tourism 2★",
+                hero_title: "Your high-altitude cocoon on the slopes",
+                hero_desc: "Located at 2,050 m in the pedestrian village of Belle Plagne, 23 m² apartment for 5 guests with direct indoor access from the car park and ski-in/ski-out onto Paradiski.",
+                btn_book_now: "Availability & Rates",
+                btn_see_photos: "View photos",
+                stat_cap_label: "Capacity", stat_cap_val: "5 Beds", stat_cap_sub: "Optimized 23 m²",
+                stat_ski_label: "Ski slopes", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out door",
+                stat_park_label: "Covered parking", stat_park_val: "100% Sheltered", stat_park_sub: "Direct corridor 100 m",
+                stat_alt_label: "Altitude", stat_alt_val: "2,050 m", stat_alt_sub: "Car-free resort",
+                arcs_tag: "Paradiski Hub", arcs_title: "Fastest access to Les Arcs",
+                arcs_desc: "From Belle Plagne, ski down straight to the Arpette high-speed chairlift. At the summit, cruise down to Montchavin to board the Vanoise Express: in under 25 minutes, you are skiing in Les Arcs without taking any shuttle bus.",
+                equip_tag: "Comfort & Amenities", equip_title: "Amenities & Sleeping (5 guests)",
+                bed_title: "Beds (5 beds)", bed_desc: "Separate mountain cabin with 2 bunk beds and storage drawer. Living room with 1 trundle bed (sleeps 2) + 1 single bed. Recent bedding, pillows and individual duvets. Sheet and towel hire available via local concierge.",
+                cook_title: "Fully equipped kitchen", cook_desc: "Dishwasher, microwave, large fridge, stovetop. Two coffee makers: Senseo pod machine + traditional filter machine #4.",
+                cozy_title: "Evenings & Relaxation", cozy_desc: "Raclette grill, fondue set and board games in the cupboards. Flat-screen TV in the living room (no private Wi-Fi, excellent 4G/5G).",
+                ski_title: "Heated locker & Balcony", ski_desc: "Private ski locker on the ground floor with electric boot dryer for warm boots every morning. Balcony with unobstructed mountain views.",
+                gal_title: "Photo Gallery",
+                tab_all: "All", tab_salon: "Living & Balcony", tab_couchages: "Entry & Bunks", tab_cuisine: "Kitchen", tab_station: "Building & Resort",
+                book_tag: "Direct Bookings", book_title: "Availability & Booking",
+                pr_badge: "⭐ Recommended • Best Rate Guaranteed", pr_label: "La Plagne Official Booking Office", pr_name: "Plagne Resort",
+                pr_desc: "Book directly through the resort center: enjoy lower fees and bundle with discounted ski passes, ski school lessons and equipment hire.",
+                pr_btn: "Book on Plagne Resort →",
+                abritel_desc: "Family booking guarantee and 24/7 customer assistance.", abritel_btn: "View on Abritel →",
+                airbnb_desc: "Split payments and AirCover guest protection.", airbnb_btn: "View on Airbnb →",
+                faq_tag: "Useful Information", faq_title: "Prepare your arrival",
+                faq_q1: "🚗 Underground car park & 100% covered access", faq_a1: "Park in the upper underground car park. The apartment is reached through a warm covered corridor 100 m away: unload your luggage without walking in snow. Free open-air parking in summer.",
+                faq_q2: "🔑 Flexible key collection & late arrival", faq_a2: "Pick up keys at the local agency or 24/7 self-check-in using the secure key box on the apartment door.",
+                faq_q3: "🪂 Getting around the village", faq_a3: "Belle Plagne is fully pedestrian. A free gondola connects Plagne Bellecôte non-stop 7 days a week from 9:00 AM to 11:30 PM.",
+                contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call"
+            },
+            nl: {
+                badge_cristaux: "❄️ Paradiski-label: 4 Kristallen / 5",
+                badge_etoiles: "Toeristische accommodatie 2★",
+                hero_title: "Uw bergcocon direct aan de piste",
+                hero_desc: "Gelegen op 2.050 m in het autovrije Belle Plagne, 23 m² appartement voor 5 personen met overdekte toegang vanaf de parking en ski-in/ski-out op Paradiski.",
+                btn_book_now: "Beschikbaarheid & Tarieven",
+                btn_see_photos: "Foto's bekijken",
+                stat_cap_label: "Capaciteit", stat_cap_val: "5 Slaapplaatsen", stat_cap_sub: "23 m² geoptimaliseerd",
+                stat_ski_label: "Skipistes", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out deur",
+                stat_park_label: "Overdekte parking", stat_park_val: "100% Overdekt", stat_park_sub: "Directe gang 100 m",
+                stat_alt_label: "Hoogte", stat_alt_val: "2.050 m", stat_alt_sub: "Autovrij dorp",
+                arcs_tag: "Paradiski Knooppunt", arcs_title: "Snelste verbinding naar Les Arcs",
+                arcs_desc: "Vanaf Belle Plagne skiet u direct naar de Arpette-stoeltjeslift. Vanaf de top daalt u af naar Montchavin voor de Vanoise Express: in minder dan 25 minuten skiet u in Les Arcs zonder bus.",
+                equip_tag: "Comfort & Voorzieningen", equip_title: "Voorzieningen & Slapen (5 personen)",
+                bed_title: "Slapen (5 bedden)", bed_desc: "Afzonderlijke berghoek met 2 stapelbedden en opberglade. Woonkamer met uitschuifbed (2 pers.) + 1 eenpersoonsbed. Nieuw beddengoed, kussens en dekbedden. Lakenverhuur mogelijk via conciërge.",
+                cook_title: "Volledig ingerichte keuken", cook_desc: "Vaatwasser, magnetron, grote koelkast, kookplaat. Twee koffiezetapparaten: Senseo pads + traditionele filtermachine nr. 4.",
+                cozy_title: "Gezelligheid & Ontspanning", cozy_desc: "Raclette, fondue en gezelschapsspellen in de kasten. Flatscreen-tv (geen privé Wi-Fi, uitstekende 4G/5G).",
+                ski_title: "Verwarmde skilocker & Balkon", ski_desc: "Privé skilocker op de begane grond met elektrische schoendroger. Balkon met vrij uitzicht op de bergen.",
+                gal_title: "Fotogalerij",
+                tab_all: "Alle", tab_salon: "Woonkamer & Balkon", tab_couchages: "Entree & Berghoek", tab_cuisine: "Keuken", tab_station: "Residentie & Dorp",
+                book_tag: "Direct Boeken", book_title: "Beschikbaarheid & Reservering",
+                pr_badge: "⭐ Aanbevolen • Beste Tarief Gegarandeerd", pr_label: "Officieel Boekingskantoor La Plagne", pr_name: "Plagne Resort",
+                pr_desc: "Rechtstreeks boeken bij het skigebied: geniet van scherpe prijzen en combineer met skipassen, skilessen en skimateriaal met korting.",
+                pr_btn: "Boek via Plagne Resort →",
+                abritel_desc: "Familieboekingsgarantie en 24/7 assistentie.", abritel_btn: "Bekijk op Abritel →",
+                airbnb_desc: "Gespreid betalen en AirCover-bescherming.", airbnb_btn: "Bekijk op Airbnb →",
+                faq_tag: "Handige Informatie", faq_title: "Uw aankomst voorbereiden",
+                faq_q1: "🚗 Ondergrondse parking & overdekte toegang", faq_a1: "Parkeer in de bovenste ondergrondse parking. Het gebouw is bereikbaar via een overdekte gang van 100 m: uitladen zonder door sneeuw te lopen. Zomers gratis buiten parkeren.",
+                faq_q2: "🔑 Flexibele sleuteloverdracht & late aankomst", faq_a2: "Sleutels ophalen bij het agentschap of 24/7 zelf inchecken via het sleutelkluisje aan de deur.",
+                faq_q3: "🪂 Vervoer in het dorp", faq_a3: "Belle Plagne is 100% autovrij. Een gratis gondel verbindt Plagne Bellecôte non-stop van 09:00 tot 23:30.",
+                contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen"
+            },
+            de: {
+                badge_cristaux: "❄️ Paradiski-Label: 4 Kristalle / 5",
+                badge_etoiles: "Klassifizierte Ferienwohnung 2★",
+                hero_title: "Ihr Bergkokon direkt an der Skipiste",
+                hero_desc: "Auf 2.050 m im autofreien Belle Plagne gelegen, 23 m² Wohnung für 5 Personen mit überdachtem Zugang vom Parkhaus und Ski-in/Ski-out auf Paradiski.",
+                btn_book_now: "Verfügbarkeit & Preise",
+                btn_see_photos: "Fotos ansehen",
+                stat_cap_label: "Kapazität", stat_cap_val: "5 Schlafplätze", stat_cap_sub: "23 m² optimiert",
+                stat_ski_label: "Skipisten", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out Tür",
+                stat_park_label: "Tiefgarage", stat_park_val: "100% Überdacht", stat_park_sub: "Direkter Gang 100 m",
+                stat_alt_label: "Höhe", stat_alt_val: "2.050 m", stat_alt_sub: "Autofreier Ort",
+                arcs_tag: "Paradiski Drehkreuz", arcs_title: "Schnellste Verbindung nach Les Arcs",
+                arcs_desc: "Fahren Sie von Belle Plagne direkt mit den Skiern zur Arpette-Sesselbahn. Von oben geht es direkt nach Montchavin zum Vanoise Express: in unter 25 Minuten Skifahren in Les Arcs ganz ohne Bus.",
+                equip_tag: "Komfort & Ausstattung", equip_title: "Ausstattung & Schlafen (5 Personen)",
+                bed_title: "Schlafen (5 Betten)", bed_desc: "Separate Schlafkabine mit 2 Etagenbetten und Schublade. Wohnbereich mit Ausziehbett (2 Pers.) + 1 Einzelbett. Neue Betten, Kissen und Daunendecken. Bettwäscheverleih über Concierge möglich.",
+                cook_title: "Voll ausgestattete Küche", cook_desc: "Geschirrspüler, Mikrowelle, großer Kühlschrank, Herd. Zwei Kaffeemaschinen: Senseo-Pads + klassische Filtermaschine Nr. 4.",
+                cozy_title: "Gemütlichkeit & Entspannung", cozy_desc: "Raclette, Fondue und Brettspiele vorhanden. Flachbild-TV im Wohnzimmer (kein privates WLAN, sehr gutes 4G/5G).",
+                ski_title: "Beheizter Skischrank & Balkon", ski_desc: "Eigener Skischrank im EG mit elektrischem Schuhtrockner für warme Skischuhe. Balkon mit freiem Bergblick.",
+                gal_title: "Fotogalerie",
+                tab_all: "Alle", tab_salon: "Wohnen & Terrasse", tab_couchages: "Eingang & Schlafkabine", tab_cuisine: "Küche", tab_station: "Residenz & Skigebiet",
+                book_tag: "Direktbuchung", book_title: "Verfügbarkeit & Buchung",
+                pr_badge: "⭐ Empfohlen • Bester Preis Garantiert", pr_label: "Offizielle Buchungsstelle La Plagne", pr_name: "Plagne Resort",
+                pr_desc: "Direktbuchung beim Skigebiet: Günstige Preise und Pakete mit Skipässen, Skikursen und Skiverleih mit Rabatt.",
+                pr_btn: "Buchen auf Plagne Resort →",
+                abritel_desc: "Familien-Buchungsgarantie und 24/7 Betreuung.", abritel_btn: "Auf Abritel ansehen →",
+                airbnb_desc: "Ratenzahlung und AirCover-Reiseschutz.", airbnb_btn: "Auf Airbnb ansehen →",
+                faq_tag: "Nützliche Informationen", faq_title: "Anreise vorbereiten",
+                faq_q1: "🚗 Tiefgarage & 100% überdachter Zugang", faq_a1: "Parken im oberen Parkhaus. Zugang über einen geschlossenen Gang von 100 m: Gepäck entladen ohne durch Schnee zu laufen. Im Sommer kostenlose Außenparkplätze.",
+                faq_q2: "🔑 Flexible Schlüsselübergabe & Spätanreise", faq_a2: "Schlüsselübergabe in der Agentur oder rund um die Uhr per Schlüsselsafe direkt an der Wohnungstür.",
+                faq_q3: "🪂 Unterwegs im Ort", faq_a3: "Belle Plagne ist 100% autofrei. Eine kostenlose Seilbahn verbindet Plagne Bellecôte täglich von 09:00 bis 23:30 Uhr.",
+                contact_tag: "Fragen zur Unterkunft?", contact_desc: "Jérôme steht telefonisch oder per WhatsApp bereit:", btn_call: "📞 Anrufen"
+            }
+        };
+
+        // GESTION DU CHANGEMENT DE LANGUE
+        function setLanguage(lang) {
+            if (!i18n[lang]) return;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.className = "lang-btn px-2.5 py-1 rounded-lg font-bold transition text-slate-300 hover:bg-white/10";
+            });
+            const activeLangBtn = document.getElementById('lang-' + lang);
+            if (activeLangBtn) {
+                activeLangBtn.className = "lang-btn px-2.5 py-1 rounded-lg font-bold transition bg-amber-500 text-[#1b2b48]";
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
+            });
+
+            localStorage.setItem('licorne_lang', lang);
+            renderGallery(currentCategory);
+        }
+
+        // LISTE DE TES PHOTOS CLASSÉES PAR DOSSIERS GITHUB
+        // 'cat' correspond aux onglets : 'salon', 'couchages', 'cuisine', 'station'.
+        // Modifie ou ajoute simplement les noms de tes photos dans l'ordre souhaité.
+     const PHOTOS = [
             // --- SÉJOUR & BALCON ---
-            { src: "images/salon & terrasse/3.jpg", cat: "salon & terrasse", titre: "Vue dégagée plein sud" },
-            { src: "images/salon & terrasse/2.jpg", cat: "salon & terrasse", titre: "Séjour ensoleillé avec TV écran plat" },
-           { src: "images/salon & terrasse/1.jpg", cat: "salon & terrasse", titre: "Double canapé" },
-           { src: "images/salon & terrasse/4.jpg", cat: "salon & terrasse", titre: "Coucher de soleil sur les montagnes" },
-           { src: "images/salon & terrasse/22.jpg", cat: "salon & terrasse", titre: "Table à manger" },
-           { src: "images/salon & terrasse/11.jpg", cat: "salon & terrasse", titre: "Vue montagne" },
-           { src: "images/salon & terrasse/12.jpg", cat: "salon & terrasse", titre: "Vue domaine" },
-           { src: "images/salon & terrasse/9.jpg", cat: "salon & terrasse", titre: "Coin apéro" },
+            { src: "photos/salon & terrasse/3.jpg", cat: "salon & terrasse", titre: "Vue dégagée plein sud" },
+            { src: "photos/salon & terrasse/2.jpg", cat: "salon & terrasse", titre: "Séjour ensoleillé avec TV écran plat" },
+           { src: "photos/salon & terrasse/1.jpg", cat: "salon & terrasse", titre: "Double canapé" },
+           { src: "photos/salon & terrasse/4.jpg", cat: "salon & terrasse", titre: "Coucher de soleil sur les montagnes" },
+           { src: "photos/salon & terrasse/22.jpg", cat: "salon & terrasse", titre: "Table à manger" },
+           { src: "photos/salon & terrasse/11.jpg", cat: "salon & terrasse", titre: "Vue montagne" },
+           { src: "photos/salon & terrasse/12.jpg", cat: "salon & terrasse", titre: "Vue domaine" },
+           { src: "photos/salon & terrasse/9.jpg", cat: "salon & terrasse", titre: "Coin apéro" },
 
             // --- ENTREE ET COIN MONTAGNE ---
-            { src: "images/entrée & coin montagne/13.jpg", cat: "entrée & coin montagne", titre: "Coin cabine avec lits superposés" },
-            { src: "images/entrée & coin montagne/15.jpg", cat: "entrée & coin montagne", titre: "Entrée" },
-           { src: "images/entrée & coin montagne/14.jpg", cat: "entrée & coin montagne", titre: "Vue montagne depuis coin montagne" },
+            { src: "photos/entrée & coin montagne/13.jpg", cat: "entrée & coin montagne", titre: "Coin cabine avec lits superposés" },
+            { src: "photos/entrée & coin montagne/15.jpg", cat: "entrée & coin montagne", titre: "Entrée" },
+           { src: "photos/entrée & coin montagne/14.jpg", cat: "entrée & coin montagne", titre: "Vue montagne depuis coin montagne" },
 
             // --- CUISINE & SALLE DE BAINS---
-           { src: "images/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Salle de bains" },
-            { src: "images/cuisine/5.jpg", cat: "cuisine & sdb", titre: "Cuisine équipée et lave-vaisselle" },
-            { src: "images/cuisine/6.jpg", cat: "cuisine & sdb", titre: "Vaisselle dispo 1" },
-            { src: "images/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Vaiselle dispo 2" },
+           { src: "photos/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Salle de bains" },
+            { src: "photos/cuisine/5.jpg", cat: "cuisine & sdb", titre: "Cuisine équipée et lave-vaisselle" },
+            { src: "photos/cuisine/6.jpg", cat: "cuisine & sdb", titre: "Vaisselle dispo 1" },
+            { src: "photos/cuisine/7.jpg", cat: "cuisine & sdb", titre: "Vaiselle dispo 2" },
 
             // --- STATION & PISTES ---
-            { src: "images/résidence & station/16.jpg", cat: "résidence & station", titre: "Hall casier à ski" },
-            { src: "images/résidence & station/17.jpg", cat: "résidence & station", titre: "Casier à ski privatif avec sèche-chaussures" },
-            { src: "images/résidence & station/18.jpg", cat: "résidence & station", titre: "Sèche-chaussures chauffant" },
-            { src: "images/résidence & station/10.jpg", cat: "résidence & station", titre: "Résidence" },
-            { src: "images/résidence & station/19.jpg", cat: "résidence & station", titre: "Départ rando" },
-            { src: "images/résidence & station/20.jpg", cat: "résidence & station", titre: "Lac des blanchets" },
-            { src: "images/résidence & station/21.jpg", cat: "résidence & station", titre: "BellePlagne depuis Blanchet" }
+            { src: "photos/résidence & station/16.jpg", cat: "résidence & station", titre: "Hall casier à ski" },
+            { src: "photos/résidence & station/17.jpg", cat: "résidence & station", titre: "Casier à ski privatif avec sèche-chaussures" },
+            { src: "photos/résidence & station/18.jpg", cat: "résidence & station", titre: "Sèche-chaussures chauffant" },
+            { src: "photos/résidence & station/10.jpg", cat: "résidence & station", titre: "Résidence" },
+            { src: "photos/résidence & station/19.jpg", cat: "résidence & station", titre: "Départ rando" },
+            { src: "photos/résidence & station/20.jpg", cat: "résidence & station", titre: "Lac des blanchets" },
+            { src: "photos/résidence & station/21.jpg", cat: "résidence & station", titre: "BellePlagne depuis Blanchet" }
         ];
-        // Rendu dynamique de la galerie
+
+        let currentCategory = 'all';
+
+        // GÉNÉRATION DE LA GRILLE
         function renderGallery(filter = 'all') {
+            currentCategory = filter;
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
+            const currentLang = localStorage.getItem('licorne_lang') || 'fr';
 
             const list = filter === 'all' ? PHOTOS : PHOTOS.filter(p => p.cat === filter);
 
             list.forEach(photo => {
                 const card = document.createElement('div');
                 card.className = "group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 aspect-video cursor-pointer";
-                card.onclick = () => openLightbox(photo.src, photo.titre);
+                const caption = (photo.titre && photo.titre[currentLang]) ? photo.titre[currentLang] : (photo.titre ? photo.titre.fr : '');
+                
+                card.onclick = () => openLightbox(encodeURI(photo.src), caption);
                 card.innerHTML = `
-                    <img src="${photo.src}" alt="${photo.titre}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-3 flex items-end justify-between">
-                        <span class="text-xs font-bold text-white">${photo.titre}</span>
-                        <span class="text-amber-400 text-sm">🔍 Agrandir</span>
+                    <img src="${encodeURI(photo.src)}" alt="${caption}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='Screenshot 2026-07-30 22.41.58.png'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-2.5 flex items-end justify-between">
+                        <span class="text-xs font-bold text-white">${caption}</span>
+                        <span class="text-amber-400 text-xs font-bold">🔍</span>
                     </div>
                 `;
                 grid.appendChild(card);
             });
         }
 
-        // Gestion des filtres
+        // FILTRAGE DE LA GALERIE
         function filterGallery(category) {
             document.querySelectorAll('#gallery-filters button').forEach(btn => {
                 btn.className = "gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition";
@@ -431,7 +574,7 @@
             renderGallery(category);
         }
 
-        // Visionneuse Lightbox
+        // VISIONNEUSE PLEIN ÉCRAN
         function openLightbox(src, caption) {
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox-caption').textContent = caption;
@@ -444,13 +587,17 @@
             document.body.style.overflow = '';
         }
 
-        // Fermeture via la touche Échap
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
         });
 
-        // Chargement initial
-        renderGallery();
+        // CHARGEMENT INITIAL DE LA LANGUE
+        (function init() {
+            const savedLang = localStorage.getItem('licorne_lang') || 'fr';
+            setLanguage(savedLang);
+        })();
     </script>
 </body>
 </html>
+  
+       
