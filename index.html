@@ -41,6 +41,9 @@
     
     <!-- 2. TITRE & DESCRIPTION POUR GOOGLE -->
     <title>Licorne 416 • Location Appartement Belle Plagne | 4 Cristaux Paradiski</title>
+    <!-- Favicon Licorne -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>">
     <meta name="description" content="Location appartement skis aux pieds à Belle Plagne (2050 m). Label 4 Cristaux Paradiski, 5 couchages, parking couvert et casier chauffé. Réservez au meilleur tarif.">
     <meta name="keywords" content="location belle plagne, appartement licorne belle plagne, paradiski 4 cristaux, skis aux pieds la plagne, location vacances savoie">
     <link rel="canonical" href="https://licorne416.github.io/">
@@ -306,6 +309,23 @@
                 <button type="button" class="absolute right-2 sm:right-6 text-white bg-white/10 hover:bg-amber-500 hover:text-[#1b2b48] w-12 h-12 rounded-2xl flex items-center justify-center text-2xl font-bold transition z-20 backdrop-blur-sm border border-white/20" onclick="nextPhoto(event)">›</button>
             </div>
 
+<!-- WEBCAM & MÉTÉO EN DIRECT -->
+            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 shadow-xl border border-amber-500/20 space-y-4">
+                <div class="flex items-center justify-between border-b border-amber-500/20 pb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl p-2 bg-amber-500/20 rounded-xl text-amber-400">☀️</span>
+                        <div>
+                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block" data-i18n="live_tag">En direct des pistes</span>
+                            <h3 class="text-lg sm:text-xl font-black text-white" data-i18n="live_title">Webcam Roche de Mio (2 730 m)</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-video relative bg-slate-900 flex items-center justify-center">
+                    <iframe src="https://www.skaping.com/la-plagne/roche-de-mio" class="w-full h-full border-0 absolute inset-0" title="Webcam La Plagne Roche de Mio" allowfullscreen></iframe>
+                </div>
+            </div>
+            
             <!-- MODULE RÉSERVATION : 1. PLAGNE RESORT | 2. ABRITEL | 3. AIRBNB -->
             <div id="reserver" class="space-y-4">
                 <div class="text-center space-y-1">
@@ -460,7 +480,8 @@
                 faq_q1: "🚗 Parking souterrain & accès 100% couvert", faq_a1: "Stationnement dans le parking souterrain amont. L'accès à l'immeuble se fait par une coursive fermée et chauffée à 100 m : déchargement des bagages sans marcher dans la neige. L'été, stationnement gratuit en extérieur.",
                 faq_q2: "🔑 Remise des clés flexible & arrivées tardives", faq_a2: "Récupération des clés en agence ou en totale autonomie 24h/24 via boîte à clés sécurisée sur la porte de l'appartement.",
                 faq_q3: "🪂 Déplacements dans la station", faq_a3: "Belle Plagne est 100% piétonne. Une télécabine gratuite relie Plagne Bellecôte 7j/7 de 9h00 à 23h30 sans interruption.",
-                contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler"
+                contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler",
+                live_tag: "En direct des pistes", live_title: "Webcam Roche de Mio (2 730 m)"
             },
             en: {
                 arcs_tag: "One of the largest ski areas in the world", 
@@ -496,7 +517,8 @@
                 faq_q1: "🚗 Underground car park & 100% covered access", faq_a1: "Park in the upper underground car park. The apartment is reached through a warm covered corridor 100 m away: unload your luggage without walking in snow. Free open-air parking in summer.",
                 faq_q2: "🔑 Flexible key collection & late arrival", faq_a2: "Pick up keys at the local agency or 24/7 self-check-in using the secure key box on the apartment door.",
                 faq_q3: "🪂 Getting around the village", faq_a3: "Belle Plagne is fully pedestrian. A free gondola connects Plagne Bellecôte non-stop 7 days a week from 9:00 AM to 11:30 PM.",
-                contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call"
+                contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call",
+                live_tag: "Live from the slopes", live_title: "Roche de Mio Webcam (2,730 m)"
             },
             nl: {
                 arcs_tag: "Een van de grootste skigebieden ter wereld", 
@@ -532,7 +554,8 @@
                 faq_q1: "🚗 Ondergrondse parking & overdekte toegang", faq_a1: "Parkeer in de bovenste ondergrondse parking. Het gebouw is bereikbaar via een overdekte gang van 100 m: uitladen zonder door sneeuw te lopen. Zomers gratis buiten parkeren.",
                 faq_q2: "🔑 Flexibele sleuteloverdracht & late aankomst", faq_a2: "Sleutels ophalen bij het agentschap of 24/7 zelf inchecken via het sleutelkluisje aan de deur.",
                 faq_q3: "🪂 Vervoer in het dorp", faq_a3: "Belle Plagne is 100% autovrij. Een gratis gondel verbindt Plagne Bellecôte non-stop van 09:00 tot 23:30.",
-                contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen"
+                contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen",
+                live_tag: "Live vanaf de pistes", live_title: "Webcam Roche de Mio (2.730 m)"
             },
             de: {
                 arcs_tag: "Eines der größten Skigebiete der Welt", 
@@ -568,7 +591,8 @@
                 faq_q1: "🚗 Tiefgarage & 100% überdachter Zugang", faq_a1: "Parken im oberen Parkhaus. Zugang über einen geschlossenen Gang von 100 m: Gepäck entladen ohne durch Schnee zu laufen. Im Sommer kostenlose Außenparkplätze.",
                 faq_q2: "🔑 Flexible Schlüsselübergabe & Spätanreise", faq_a2: "Schlüsselübergabe in der Agentur oder rund um die Uhr per Schlüsselsafe direkt an der Wohnungstür.",
                 faq_q3: "🪂 Unterwegs im Ort", faq_a3: "Belle Plagne ist 100% autofrei. Eine kostenlose Seilbahn verbindet Plagne Bellecôte täglich von 09:00 bis 23:30 Uhr.",
-                contact_tag: "Fragen zur Unterkunft?", contact_desc: "Jérôme steht telefonisch oder per WhatsApp bereit:", btn_call: "📞 Anrufen"
+                contact_tag: "Fragen zur Unterkunft?", contact_desc: "Jérôme steht telefonisch oder per WhatsApp bereit:", btn_call: "📞 Anrufen",
+                live_tag: "Live von den Pisten", live_title: "Webcam Roche de Mio (2.730 m)"
             }
         };
 
