@@ -607,6 +607,7 @@
                 if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
             });
 
+                    document.documentElement.lang = lang;
             localStorage.setItem('licorne_lang', lang);
             renderGallery(currentCategory);
         }
