@@ -71,26 +71,13 @@
             font-family: 'Cinzel', serif;
         }
 
-        .glass-card {
-            background: rgba(252, 250, 247, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(217, 119, 6, 0.2);
+        .glass-card { background: rgba(252, 250, 247, 0.96); border: 1px solid rgba(217, 119, 6, 0.2); }
+        .glass-card-dark { background: rgba(27, 43, 72, 0.96); border: 1px solid rgba(245, 158, 11, 0.25); }
+        body::before {
+            content: ""; position: fixed; inset: 0; z-index: -1;
+            background: url('belle_plagne_print_40x50cm_300dp.png') center / cover no-repeat;
         }
-
-        .glass-card-dark {
-            background: rgba(27, 43, 72, 0.94);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(245, 158, 11, 0.25);
-        }
-
-        .bg-poster {
-            background-image: url('belle_plagne.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+                
     </style>
 </head>
 <body class="bg-poster min-h-screen relative antialiased flex flex-col justify-between">
