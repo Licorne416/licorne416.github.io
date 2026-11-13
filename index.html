@@ -323,65 +323,131 @@
                 </div>
             </div>
             
-            <!-- MODULE RÉSERVATION : 1. PLAGNE RESORT | 2. ABRITEL | 3. AIRBNB -->
-            <div id="reserver" class="space-y-4">
+            <!-- MODULE RÉSERVATION : DIRECT | PLAGNE RESORT | AIRBNB | ABRITEL -->
+            <div id="reserver" class="space-y-5">
                 <div class="text-center space-y-1">
-                    <span class="text-xs font-black text-amber-400 uppercase tracking-widest" data-i18n="book_tag">Réservations Directes</span>
+                    <span class="text-xs font-black text-amber-400 uppercase tracking-widest" data-i18n="book_tag">Réservez votre séjour</span>
                     <h3 class="text-xl sm:text-2xl font-black uppercase text-white font-serif-title" data-i18n="book_title">Disponibilités & Réservation</h3>
                 </div>
 
-                <!-- 1. PLAGNE RESORT EN VEDETTE -->
-                <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white border-2 border-amber-400 shadow-xl space-y-3">
+                <!-- 1. RÉSERVATION EN DIRECT (MEILLEUR PRIX GARANTI) -->
+                <div class="glass-card-dark rounded-3xl p-5 sm:p-7 text-white border-2 border-emerald-500/80 shadow-2xl space-y-5 relative overflow-hidden">
+                    <!-- Petit effet visuel -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    
+                    <div class="relative z-10 flex flex-col md:flex-row gap-6">
+                        <!-- Texte explicatif -->
+                        <div class="md:w-1/3 space-y-3">
+                            <span class="inline-block px-3 py-1 bg-emerald-500 text-slate-950 font-black text-[10px] sm:text-xs rounded-full uppercase tracking-wider" data-i18n="best_price_badge">
+                                💰 Meilleur prix garanti
+                            </span>
+                            <h4 class="text-xl font-black text-white" data-i18n="direct_title">Réservation Directe</h4>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="direct_desc">
+                                Évitez les frais de service des plateformes (jusqu'à -15%). Remplissez ce formulaire pour vérifier la disponibilité et bloquer vos dates directement avec le propriétaire.
+                            </p>
+                            <!-- Espace pour intégrer ton widget Calendrier plus tard -->
+                            <div class="mt-4 p-3 bg-slate-950/50 rounded-xl border border-white/10 text-center text-xs text-slate-400">
+                                <i class="far fa-calendar-alt mb-1 text-lg text-emerald-400"></i><br>
+                                <span data-i18n="direct_cal_hint">Vérifiez vos dates ci-contre</span>
+                            </div>
+                        </div>
+
+                        <!-- Formulaire de demande -->
+                        <!-- Remplacer "VOTRE_LIEN_FORMSPREE" par le lien fourni par formspree.io -->
+                        <form action="https://formspree.io/f/VOTRE_LIEN_FORMSPREE" method="POST" class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_name">Nom & Prénom</label>
+                                <input type="text" name="nom" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_email">Email</label>
+                                <input type="email" name="email" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_dates">Dates de séjour</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="date" name="arrivee" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-2 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+                                    <span class="text-slate-400">au</span>
+                                    <input type="date" name="depart" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-2 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_guests">Voyageurs</label>
+                                <select name="voyageurs" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+                                    <option value="1">1 Personne</option>
+                                    <option value="2">2 Personnes</option>
+                                    <option value="3">3 Personnes</option>
+                                    <option value="4">4 Personnes</option>
+                                    <option value="5">5 Personnes</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2 space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_msg">Message (Optionnel)</label>
+                                <textarea name="message" rows="2" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition"></textarea>
+                            </div>
+                            <div class="sm:col-span-2 pt-1">
+                                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider py-3.5 rounded-xl transition shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                                    <i class="fas fa-paper-plane"></i> <span data-i18n="form_btn">Demander un devis sans engagement</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 2. PLAGNE RESORT (AVANTAGE SERVICES) -->
+                <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white border border-amber-500/50 shadow-xl space-y-3">
                     <div class="flex items-center justify-between flex-wrap gap-2">
                         <span class="px-3 py-1 bg-amber-500 text-slate-950 font-black text-[10px] sm:text-xs rounded-full uppercase tracking-wider" data-i18n="pr_badge">
-                            ⭐ Réservation directe auprès de la station
+                            ⛷️ L'avantage tout-en-un
                         </span>
-                        <span class="text-xs text-amber-300 font-bold" data-i18n="pr_label">Centrale de réservation de La Plagne</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
                         <div class="md:col-span-2 space-y-1.5">
-                            <h4 class="text-lg sm:text-xl font-black text-white" data-i18n="pr_name">Plagne Resort</h4>
+                            <h4 class="text-lg sm:text-xl font-black text-white" data-i18n="pr_name">Centrale Plagne Resort</h4>
+                            <p class="text-xs text-amber-200 font-bold" data-i18n="pr_advantage">
+                                Idéal pour simplifier vos vacances !
+                            </p>
                             <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pr_desc">
-                                Réservation en direct auprès de la station : composez votre séjour avec forfaits de ski, cours ESF et matériel.
+                                Réservez le logement et ajoutez directement vos <strong>forfaits de ski</strong>, vos <strong>cours ESF</strong> et votre <strong>matériel de location</strong> dans le même panier, souvent avec des réductions.
                             </p>
                         </div>
                         <div class="text-center md:text-right">
                             <a href="https://www.laplagneresort.com/location/2-pieces-residence-carroley-a-ref-pl-ca31-118385" target="_blank" rel="noopener" class="inline-block w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs uppercase tracking-wider py-3.5 px-6 rounded-2xl shadow-lg transition active:scale-95" data-i18n="pr_btn">
-                                Réserver sur Plagne Resort
+                                Voir sur Plagne Resort
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. ABRITEL & 3. AIRBNB -->
+                <!-- 3. AIRBNB & 4. ABRITEL -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
-                    <!-- ABRITEL -->
-                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between">
-                        <div class="space-y-1.5">
-                            <div class="w-10 h-10 mx-auto rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl font-black">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h4 class="text-base font-black text-white">Abritel / Vrbo</h4>
-                            <p class="text-xs text-slate-300" data-i18n="abritel_desc">Réservation et paiement via la plateforme Abritel.</p>
-                        </div>
-                        <a href="https://www.abritel.fr/location-vacances/p2725287?dateless=true" target="_blank" rel="noopener" class="block bg-[#1c4482] hover:bg-[#153465] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="abritel_btn">
-                            Voir sur Abritel →
-                        </a>
-                    </div>
-
-                    <!-- AIRBNB -->
-                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between">
+                    <!-- AIRBNB (En 2ème) -->
+                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between hover:border-[#FF385C]/50 transition">
                         <div class="space-y-1.5">
                             <div class="w-10 h-10 mx-auto rounded-xl bg-[#FF385C]/15 text-[#FF385C] flex items-center justify-center text-xl font-black">
                                 <i class="fab fa-airbnb"></i>
                             </div>
                             <h4 class="text-base font-black text-white">Airbnb</h4>
-                            <p class="text-xs text-slate-300" data-i18n="airbnb_desc">Réservation et paiement via la plateforme Airbnb.</p>
+                            <p class="text-xs text-slate-400" data-i18n="airbnb_desc">Réservation via la plateforme Airbnb (frais applicables).</p>
                         </div>
-                        <a href="https://www.airbnb.fr/rooms/1731050533290118377?photo_id=2730873927" target="_blank" rel="noopener" class="block bg-[#FF385C] hover:bg-[#e0314f] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="airbnb_btn">
-                            Voir sur Airbnb →
+                        <a href="https://www.airbnb.fr/rooms/1731050533290118377?photo_id=2730873927" target="_blank" rel="noopener" class="block bg-white/10 hover:bg-[#FF385C] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="airbnb_btn">
+                            Consulter Airbnb →
+                        </a>
+                    </div>
+
+                    <!-- ABRITEL (En 3ème) -->
+                    <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between hover:border-[#1c4482]/50 transition">
+                        <div class="space-y-1.5">
+                            <div class="w-10 h-10 mx-auto rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl font-black">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 class="text-base font-black text-white">Abritel / Vrbo</h4>
+                            <p class="text-xs text-slate-400" data-i18n="abritel_desc">Réservation via la plateforme Abritel (frais applicables).</p>
+                        </div>
+                        <a href="https://www.abritel.fr/location-vacances/p2725287?dateless=true" target="_blank" rel="noopener" class="block bg-white/10 hover:bg-[#1c4482] text-white font-black text-xs uppercase tracking-wider py-3 rounded-xl transition shadow-md active:scale-95" data-i18n="abritel_btn">
+                            Consulter Abritel →
                         </a>
                     </div>
 
@@ -481,7 +547,18 @@
                 faq_q3: "🪂 Déplacements dans la station", faq_a3: "Belle Plagne est 100% piétonne. Une télécabine gratuite relie Plagne Bellecôte 7j/7 de 9h00 à 23h30 sans interruption.",
                 contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler",
                 live_tag: "En direct des pistes", live_title: "Webcam Roche de Mio (2 730 m)",
-                reg_label: "N° d'enregistrement"
+                reg_label: "N° d'enregistrement",
+                best_price_badge: "💰 Meilleur prix garanti",
+                direct_title: "Réservation Directe",
+                direct_desc: "Évitez les frais de service des plateformes (jusqu'à -15%). Remplissez ce formulaire pour vérifier la disponibilité et bloquer vos dates directement avec le propriétaire.",
+                direct_cal_hint: "Vérifiez vos dates ci-contre",
+                form_name: "Nom & Prénom",
+                form_email: "Email",
+                form_dates: "Dates de séjour",
+                form_guests: "Voyageurs",
+                form_msg: "Message (Optionnel)",
+                form_btn: "Demander un devis sans engagement",
+                pr_advantage: "Idéal pour simplifier vos vacances !"
             },
             en: {
                 arcs_tag: "One of the largest ski areas in the world", 
@@ -521,7 +598,18 @@
                 faq_q3: "🪂 Getting around the village", faq_a3: "Belle Plagne is fully pedestrian. A free gondola connects Plagne Bellecôte non-stop 7 days a week from 9:00 AM to 11:30 PM.",
                 contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call",
                 live_tag: "Live from the slopes", live_title: "Roche de Mio Webcam (2,730 m)",
-                reg_label: "Registration no."
+                reg_label: "Registration no.",
+                best_price_badge: "💰 Best price guaranteed",
+                direct_title: "Direct Booking",
+                direct_desc: "Avoid platform service fees (save up to 15%). Fill out this form to check availability and block your dates directly with the owner.",
+                direct_cal_hint: "Check your dates here",
+                form_name: "Full Name",
+                form_email: "Email",
+                form_dates: "Stay Dates",
+                form_guests: "Guests",
+                form_msg: "Message (Optional)",
+                form_btn: "Request a free quote",
+                pr_advantage: "Perfect to simplify your holiday!",
             },
             nl: {
                 arcs_tag: "Een van de grootste skigebieden ter wereld", 
@@ -561,7 +649,18 @@
                 faq_q3: "🪂 Vervoer in het dorp", faq_a3: "Belle Plagne is 100% autovrij. Een gratis gondel verbindt Plagne Bellecôte non-stop van 09:00 tot 23:30.",
                 contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen",
                 live_tag: "Live vanaf de pistes", live_title: "Webcam Roche de Mio (2.730 m)",
-                reg_label: "Registratienummer"
+                reg_label: "Registratienummer",
+                best_price_badge: "💰 Beste prijsgarantie",
+                direct_title: "Directe Reservering",
+                direct_desc: "Vermijd servicekosten van platforms (bespaar tot 15%). Vul dit formulier in om de beschikbaarheid te controleren en uw data rechtstreeks bij de eigenaar vast te leggen.",
+                direct_cal_hint: "Controleer uw data hiernaast",
+                form_name: "Voor- en achternaam",
+                form_email: "E-mail",
+                form_dates: "Verblijfsdata",
+                form_guests: "Aantal personen",
+                form_msg: "Bericht (Optioneel)",
+                form_btn: "Vrijblijvende offerte aanvragen",
+                pr_advantage: "Ideaal om uw vakantie eenvoudig te regelen!"
             },
             de: {
                 arcs_tag: "Eines der größten Skigebiete der Welt", 
@@ -601,7 +700,18 @@
                 faq_q3: "🪂 Unterwegs im Ort", faq_a3: "Belle Plagne ist 100% autofrei. Eine kostenlose Seilbahn verbindet Plagne Bellecôte täglich von 09:00 bis 23:30 Uhr.",
                 contact_tag: "Fragen zur Unterkunft?", contact_desc: "Jérôme steht telefonisch oder per WhatsApp bereit:", btn_call: "📞 Anrufen",
                 live_tag: "Live von den Pisten", live_title: "Webcam Roche de Mio (2.730 m)",
-                reg_label: "Registrierungsnummer"
+                reg_label: "Registrierungsnummer",
+                best_price_badge: "💰 Bestpreisgarantie",
+                direct_title: "Direktbuchung",
+                direct_desc: "Vermeiden Sie Plattform-Servicegebühren (bis zu 15 % sparen). Füllen Sie dieses Formular aus, um die Verfügbarkeit zu prüfen und Ihre Daten direkt beim Eigentümer zu sichern.",
+                direct_cal_hint: "Prüfen Sie Ihre Daten hier",
+                form_name: "Vor- & Nachname",
+                form_email: "E-Mail",
+                form_dates: "Reisedaten",
+                form_guests: "Reisende",
+                form_msg: "Nachricht (Optional)",
+                form_btn: "Unverbindliches Angebot anfordern",
+                pr_advantage: "Ideal, um Ihren Urlaub stressfrei zu planen!"
             }
         };
 
