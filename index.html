@@ -87,6 +87,16 @@
         }
                 
     </style>
+    
+    <!-- Animations AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Calendrier Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    
 </head>
 <body class="bg-poster min-h-screen relative antialiased flex flex-col justify-between">
 
@@ -126,7 +136,7 @@
         <main class="max-w-4xl mx-auto px-3 sm:px-6 pt-6 space-y-6">
 
             <!-- BANNIÈRE HERO -->
-            <div class="glass-card-dark rounded-3xl p-4 sm:p-6 text-white shadow-2xl relative overflow-hidden text-center space-y-4">
+            <div class="glass-card-dark rounded-3xl p-4 sm:p-6 text-white shadow-2xl relative overflow-hidden text-center space-y-4" data-aos="fade-up">
                 
                 <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-lg group">
                     <img src="banniere.webp" alt="Licorne 416 Banner" class="w-full h-auto block group-hover:scale-105 transition duration-700">
@@ -162,7 +172,7 @@
             </div>
 
             <!-- 4 CHIFFRES CLÉS -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="glass-card-dark p-3.5 rounded-2xl border border-amber-500/20 text-center">
                     <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider" data-i18n="stat_cap_label">Capacité</p>
                     <p class="text-base sm:text-lg font-black text-white" data-i18n="stat_cap_val">5 Couchages</p>
@@ -186,7 +196,7 @@
             </div>
 
            <!-- EMPLACEMENT STRATÉGIQUE AU CŒUR DE PARADISKI -->
-            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-xl border border-amber-500/20 space-y-4">
+            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-xl border border-amber-500/20 space-y-4" data-aos="fade-up">
                 <div class="flex items-center gap-3 border-b border-amber-500/20 pb-3">
                     <span class="text-3xl p-2 bg-amber-500/20 rounded-xl text-amber-400">🏔️</span>
                     <div>
@@ -217,7 +227,7 @@
             </div>
 
             <!-- DÉTAILS ÉQUIPEMENTS & COUCHAGES -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-5">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-5" data-aos="fade-up">
                 <div class="flex items-center gap-3 border-b border-amber-900/10 pb-4">
                     <span class="text-3xl p-2 bg-amber-100 rounded-2xl border border-amber-200">✨</span>
                     <div>
@@ -266,14 +276,14 @@
             </div>
 
             <!-- GALERIE PHOTOS AVEC ONGLETS PAR DOSSIERS GITHUB -->
-            <div id="galerie" class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-2xl border border-amber-500/20 space-y-5">
+            <div id="galerie" class="glass-card-dark rounded-3xl p-5 sm:p-6 text-white shadow-2xl border border-amber-500/20 space-y-5" data-aos="fade-up">
                 <div class="flex items-center justify-between flex-wrap gap-3 border-b border-amber-500/20 pb-3">
                     <div class="flex items-center gap-2.5">
                         <span class="text-2xl p-1.5 bg-amber-500/20 rounded-xl text-amber-400">📸</span>
                         <h3 class="text-lg sm:text-xl font-black text-white uppercase" data-i18n="gal_title">Galerie Photos</h3>
                     </div>
 
-<!-- Filtres calqués sur tes dossiers GitHub -->
+            <!-- Filtres calqués sur tes dossiers GitHub -->
                     <div class="flex flex-wrap gap-1.5 text-xs font-bold" id="gallery-filters">
                         <button onclick="filterGallery('all')" data-cat="all" class="gallery-tab px-3 py-1.5 rounded-xl bg-amber-500 text-[#1b2b48] transition" data-i18n="tab_all">Toutes</button>
                         <button onclick="filterGallery('salon & terrasse')" data-cat="salon & terrasse" class="gallery-tab px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 transition" data-i18n="tab_salon">Salon & Terrasse</button>
@@ -286,7 +296,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5" id="gallery-grid"></div>
             </div>
 
-<!-- VISIONNEUSE PLEIN ÉCRAN (LIGHTBOX CAROUSEL TRANSLUCIDE) -->
+            <!-- VISIONNEUSE PLEIN ÉCRAN (LIGHTBOX CAROUSEL TRANSLUCIDE) -->
             <div id="lightbox" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6" onclick="closeLightbox()">
                 <button type="button" class="absolute top-4 right-4 text-white/80 hover:text-white text-3xl font-black p-2 transition z-20" onclick="closeLightbox()">✕</button>
                 
@@ -305,8 +315,8 @@
                 <button type="button" class="absolute right-2 sm:right-6 text-white bg-white/10 hover:bg-amber-500 hover:text-[#1b2b48] w-12 h-12 rounded-2xl flex items-center justify-center text-2xl font-bold transition z-20 backdrop-blur-sm border border-white/20" onclick="nextPhoto(event)">›</button>
             </div>
 
-<!-- WEBCAM & MÉTÉO EN DIRECT -->
-            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 shadow-xl border border-amber-500/20 space-y-4">
+            <!-- WEBCAM & MÉTÉO EN DIRECT -->
+            <div class="glass-card-dark rounded-3xl p-5 sm:p-6 shadow-xl border border-amber-500/20 space-y-4" data-aos="fade-up">
                 <div class="flex items-center justify-between border-b border-amber-500/20 pb-3">
                     <div class="flex items-center gap-3">
                         <span class="text-2xl p-2 bg-amber-500/20 rounded-xl text-amber-400">☀️</span>
@@ -324,7 +334,7 @@
             </div>
             
             <!-- MODULE RÉSERVATION : DIRECT | PLAGNE RESORT | AIRBNB | ABRITEL -->
-            <div id="reserver" class="space-y-5">
+            <div id="reserver" class="space-y-5" data-aos="fade-up">
                 <div class="text-center space-y-1">
                     <span class="text-xs font-black text-amber-400 uppercase tracking-widest" data-i18n="book_tag">Réservez votre séjour</span>
                     <h3 class="text-xl sm:text-2xl font-black uppercase text-white font-serif-title" data-i18n="book_title">Disponibilités & Réservation</h3>
@@ -332,11 +342,9 @@
 
                 <!-- 1. RÉSERVATION EN DIRECT (MEILLEUR PRIX GARANTI) -->
                 <div class="glass-card-dark rounded-3xl p-5 sm:p-7 text-white border-2 border-emerald-500/80 shadow-2xl space-y-5 relative overflow-hidden">
-                    <!-- Petit effet visuel -->
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
                     
                     <div class="relative z-10 flex flex-col md:flex-row gap-6">
-                        <!-- Texte explicatif -->
                         <div class="md:w-1/3 space-y-3">
                             <span class="inline-block px-3 py-1 bg-emerald-500 text-slate-950 font-black text-[10px] sm:text-xs rounded-full uppercase tracking-wider" data-i18n="best_price_badge">
                                 💰 Meilleur prix garanti
@@ -345,31 +353,24 @@
                             <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="direct_desc">
                                 Évitez les frais de service des plateformes (jusqu'à -15%). Remplissez ce formulaire pour vérifier la disponibilité et bloquer vos dates directement avec le propriétaire.
                             </p>
-                            <!-- Espace pour intégrer ton widget Calendrier plus tard -->
                             <div class="mt-4 p-3 bg-slate-950/50 rounded-xl border border-white/10 text-center text-xs text-slate-400">
                                 <i class="far fa-calendar-alt mb-1 text-lg text-emerald-400"></i><br>
-                                <span data-i18n="direct_cal_hint">Vérifiez vos dates ci-contre</span>
+                                <span data-i18n="direct_cal_hint">Sélectionnez vos dates ci-contre (samedi au samedi en hiver)</span>
                             </div>
                         </div>
 
-                        <!-- Formulaire de demande -->
-                        <!-- Remplacer "VOTRE_LIEN_FORMSPREE" par le lien fourni par formspree.io -->
-                        <form action="https://formspree.io/f/VOTRE_LIEN_FORMSPREE" method="POST" class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <form id="direct-booking-form" class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div class="space-y-1">
-                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_name">Nom & Prénom</label>
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_firstname">Prénom</label>
+                                <input type="text" name="prenom" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_lastname">Nom</label>
                                 <input type="text" name="nom" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
                             </div>
                             <div class="space-y-1">
                                 <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_email">Email</label>
                                 <input type="email" name="email" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition">
-                            </div>
-                            <div class="space-y-1">
-                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_dates">Dates de séjour</label>
-                                <div class="flex items-center gap-2">
-                                    <input type="date" name="arrivee" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-2 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
-                                    <span class="text-slate-400">au</span>
-                                    <input type="date" name="depart" required class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-2 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition">
-                                </div>
                             </div>
                             <div class="space-y-1">
                                 <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_guests">Voyageurs</label>
@@ -382,6 +383,14 @@
                                 </select>
                             </div>
                             <div class="sm:col-span-2 space-y-1">
+                                <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_dates">Dates de séjour</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="text" id="date-arrivee" name="arrivee" required placeholder="Arrivée" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition cursor-pointer">
+                                    <span class="text-slate-400 text-xs">au</span>
+                                    <input type="text" id="date-depart" name="depart" required placeholder="Départ" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 transition cursor-pointer">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2 space-y-1">
                                 <label class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider" data-i18n="form_msg">Message (Optionnel)</label>
                                 <textarea name="message" rows="2" class="w-full bg-slate-900/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500 transition"></textarea>
                             </div>
@@ -389,6 +398,9 @@
                                 <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider py-3.5 rounded-xl transition shadow-lg active:scale-95 flex items-center justify-center gap-2">
                                     <i class="fas fa-paper-plane"></i> <span data-i18n="form_btn">Demander un devis sans engagement</span>
                                 </button>
+                                <div id="form-feedback" class="hidden mt-3 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs font-bold text-center">
+                                    ✅ Demande envoyée ! Jérôme vous répondra très rapidement.
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -414,7 +426,7 @@
                         </div>
                         <div class="text-center md:text-right">
                             <a href="https://www.laplagneresort.com/location/2-pieces-residence-carroley-a-ref-pl-ca31-118385" target="_blank" rel="noopener" class="inline-block w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-[#1b2b48] font-black text-xs uppercase tracking-wider py-3.5 px-6 rounded-2xl shadow-lg transition active:scale-95" data-i18n="pr_btn">
-                                Voir sur Plagne Resort
+                                Voir sur Plagne Resort →
                             </a>
                         </div>
                     </div>
@@ -423,7 +435,7 @@
                 <!-- 3. AIRBNB & 4. ABRITEL -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
-                    <!-- AIRBNB (En 2ème) -->
+                    <!-- AIRBNB -->
                     <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between hover:border-[#FF385C]/50 transition">
                         <div class="space-y-1.5">
                             <div class="w-10 h-10 mx-auto rounded-xl bg-[#FF385C]/15 text-[#FF385C] flex items-center justify-center text-xl font-black">
@@ -437,7 +449,7 @@
                         </a>
                     </div>
 
-                    <!-- ABRITEL (En 3ème) -->
+                    <!-- ABRITEL -->
                     <div class="glass-card-dark rounded-3xl p-5 text-center space-y-3 border border-white/10 flex flex-col justify-between hover:border-[#1c4482]/50 transition">
                         <div class="space-y-1.5">
                             <div class="w-10 h-10 mx-auto rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl font-black">
@@ -455,7 +467,7 @@
             </div>
 
             <!-- INFOS PRATIQUES (ACCÈS COUVERT, CLÉS, TÉLÉCABINE) -->
-            <div id="faq" class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-4 text-slate-800">
+            <div id="faq" class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-4 text-slate-800" data-aos="fade-up">
                 <div class="border-b border-amber-900/10 pb-3">
                     <span class="text-[10px] font-black text-[#c86d2a] uppercase tracking-widest block" data-i18n="faq_tag">Informations Utiles</span>
                     <h3 class="text-xl sm:text-2xl font-black text-[#1b2b48]" data-i18n="faq_title">Préparer votre arrivée</h3>
@@ -499,10 +511,17 @@
 
         </main>
 
-        <footer class="mt-8 text-center text-slate-400 text-xs">
+        <footer class="mt-8 pb-24 sm:pb-0 text-center text-slate-400 text-xs">
             <p>© Jérôme POUTEAU • Licorne 416 • Belle Plagne</p>
         </footer>
 
+    </div>
+
+    <!-- BOUTON FLOTTANT MOBILE -->
+    <div class="fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-sm z-40 sm:hidden">
+        <a href="#reserver" class="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-300 hover:to-emerald-400 text-slate-950 font-black text-xs uppercase tracking-wider py-3.5 rounded-2xl shadow-[0_10px_25px_rgba(16,185,129,0.4)] border border-emerald-300 transition active:scale-95">
+            <i class="far fa-calendar-check text-base"></i> <span data-i18n="direct_title">Réservation Directe</span>
+        </a>
     </div>
 
     <!-- SCRIPT MULTILINGUE & GALERIE PAR DOSSIERS -->
@@ -512,7 +531,7 @@
             fr: {
                 domain_peaks_title: "Le meilleur de La Plagne en accès direct",
                 domain_peaks_desc: "Belle Plagne (2050m) est le cœur névralgique de la station. La télécabine centrale vous propulse immédiatement vers les neiges garanties de la <strong>Roche de Mio (2 730 m)</strong> et du glacier. Vous basculez tout aussi vite sur la <strong>Grande Rochette (2 505 m)</strong> pour dévaler les plus belles pistes face à un panorama alpin à 360°, sans subir de longues liaisons.",
-                domain_arcs_title: "Liaison express vers Les Arcs",               
+                domain_arcs_title: "Liaison express vers Les Arcs",                
                 badge_cristaux: "❄️ Label Paradiski : 4 Cristaux / 5",
                 badge_etoiles: "Meublé de Tourisme 2★",
                 hero_title: "Votre cocon d'altitude<br>skis aux pieds",
@@ -533,13 +552,28 @@
                 ski_title: "Casier chauffé & Balcon", ski_desc: "Casier à skis privatif en RDC avec sèche-chaussures électrique pour des chaussures chaudes chaque matin. Balcon avec vue dégagée sur les montagnes et le domaine.",
                 gal_title: "Galerie Photos",
                 tab_all: "Toutes", tab_salon: "Salon & Terrasse", tab_couchages: "Entrée & Coin montagne",  tab_cuisine: "Cuisine & SDB", tab_station: "Résidence & Station",
-                book_tag: "Réservations Directes", book_title: "Disponibilités & Réservation",
-                pr_badge: "⭐ Réservation directe auprès de la station",
-                pr_label: "Centrale de réservation de La Plagne",
-                pr_desc: "Réservez directement auprès de la station et composez votre séjour avec forfaits de ski, cours et matériel (selon les offres en vigueur).",
-                abritel_desc: "Réservation et paiement via la plateforme Abritel.", abritel_btn: "Voir sur Abritel →",
-                airbnb_desc: "Réservation et paiement via la plateforme Airbnb.", airbnb_btn: "Voir sur Airbnb →",
-                pr_btn: "Réserver sur Plagne Resort →",
+                book_tag: "Réservez votre séjour",
+                book_title: "Disponibilités & Réservation",
+                best_price_badge: "💰 Meilleur prix garanti",
+                direct_title: "Réservation Directe",
+                direct_desc: "Évitez les frais de service des plateformes (jusqu'à -15%). Remplissez ce formulaire pour vérifier la disponibilité et bloquer vos dates directement avec le propriétaire.",
+                direct_cal_hint: "Sélectionnez vos dates ci-contre (samedi au samedi en hiver)",
+                form_firstname: "Prénom",
+                form_lastname: "Nom",
+                form_email: "Email",
+                form_dates: "Dates de séjour",
+                form_guests: "Voyageurs",
+                form_msg: "Message (Optionnel)",
+                form_btn: "Demander un devis sans engagement",
+                pr_badge: "⛷️ L'avantage tout-en-un",
+                pr_name: "Centrale Plagne Resort",
+                pr_advantage: "Idéal pour simplifier vos vacances !",
+                pr_desc: "Réservez le logement et ajoutez directement vos <strong>forfaits de ski</strong>, vos <strong>cours ESF</strong> et votre <strong>matériel de location</strong> dans le même panier, souvent avec des réductions.",
+                pr_btn: "Voir sur Plagne Resort →",
+                airbnb_desc: "Réservation via la plateforme Airbnb (frais applicables).",
+                airbnb_btn: "Consulter Airbnb →",
+                abritel_desc: "Réservation via la plateforme Abritel (frais applicables).",
+                abritel_btn: "Consulter Abritel →",
                 faq_tag: "Informations Utiles", faq_title: "Préparer votre arrivée",
                 faq_q1: "🚗 Parking souterrain & accès couvert",
                 faq_a1: "Stationnement dans le parking souterrain amont. L'accès à l'immeuble se fait par une coursive couverte à 100 m : déchargement des bagages sans marcher dans la neige. L'été, stationnement gratuit dans ce même parking.",
@@ -548,17 +582,6 @@
                 contact_tag: "Des questions sur le logement ?", contact_desc: "Jérôme reste disponible par téléphone ou WhatsApp :", btn_call: "📞 Appeler",
                 live_tag: "En direct des pistes", live_title: "Webcam Roche de Mio (2 730 m)",
                 reg_label: "N° d'enregistrement",
-                best_price_badge: "💰 Meilleur prix garanti",
-                direct_title: "Réservation Directe",
-                direct_desc: "Évitez les frais de service des plateformes (jusqu'à -15%). Remplissez ce formulaire pour vérifier la disponibilité et bloquer vos dates directement avec le propriétaire.",
-                direct_cal_hint: "Vérifiez vos dates ci-contre",
-                form_name: "Nom & Prénom",
-                form_email: "Email",
-                form_dates: "Dates de séjour",
-                form_guests: "Voyageurs",
-                form_msg: "Message (Optionnel)",
-                form_btn: "Demander un devis sans engagement",
-                pr_advantage: "Idéal pour simplifier vos vacances !"
             },
             en: {
                 arcs_tag: "One of the largest ski areas in the world", 
@@ -584,13 +607,28 @@
                 ski_title: "Heated locker & Balcony", ski_desc: "Private ski locker on the ground floor with electric boot dryer for warm boots every morning. Balcony with open views of the mountains and the ski area.",
                 gal_title: "Photo Gallery",
                 tab_all: "All", tab_salon: "Living & Balcony", tab_couchages: "Entry & Bunks", tab_cuisine: "Kitchen & Bath", tab_station: "Building & Resort",
-                book_tag: "Direct Bookings", book_title: "Availability & Booking",
-                pr_badge: "⭐ Book direct with the resort",
-                pr_label: "La Plagne booking office",
-                pr_desc: "Book directly with the resort and add ski passes, lessons and equipment hire to your stay (subject to current offers).",
-                abritel_desc: "Booking and payment via the Abritel platform.", abritel_btn: "View on Abritel →",
-                airbnb_desc: "Booking and payment via the Airbnb platform.", airbnb_btn: "View on Airbnb →",
-                pr_btn: "Book on Plagne Resort →",
+                book_tag: "Book your stay",
+                book_title: "Availability & Booking",
+                best_price_badge: "💰 Best price guaranteed",
+                direct_title: "Direct Booking",
+                direct_desc: "Avoid platform service fees (save up to 15%). Fill out this form to check availability and block your dates directly with the owner.",
+                direct_cal_hint: "Select your dates here (Saturday to Saturday in winter)",
+                form_firstname: "First Name",
+                form_lastname: "Last Name",
+                form_email: "Email",
+                form_dates: "Stay Dates",
+                form_guests: "Guests",
+                form_msg: "Message (Optional)",
+                form_btn: "Request a free quote",
+                pr_badge: "⛷️ The all-in-one advantage",
+                pr_name: "Plagne Resort Booking Office",
+                pr_advantage: "Perfect to simplify your holiday!",
+                pr_desc: "Book the apartment and directly add your <strong>ski passes</strong>, <strong>ESF ski lessons</strong> and <strong>equipment hire</strong> in the same basket, often with discounts.",
+                pr_btn: "View on Plagne Resort →",
+                airbnb_desc: "Booking via the Airbnb platform (service fees apply).",
+                airbnb_btn: "View on Airbnb →",
+                abritel_desc: "Booking via the Abritel platform (service fees apply).",
+                abritel_btn: "View on Abritel →",
                 faq_tag: "Useful Information", faq_title: "Prepare your arrival",
                 faq_q1: "🚗 Underground car park & covered access",
                 faq_a1: "Park in the upper underground car park. The building is accessed via a 100 m covered walkway: unload your luggage without walking in the snow. Free parking in this same car park in summer.",
@@ -599,17 +637,6 @@
                 contact_tag: "Questions about the apartment?", contact_desc: "Jérôme is available by phone or WhatsApp:", btn_call: "📞 Call",
                 live_tag: "Live from the slopes", live_title: "Roche de Mio Webcam (2,730 m)",
                 reg_label: "Registration no.",
-                best_price_badge: "💰 Best price guaranteed",
-                direct_title: "Direct Booking",
-                direct_desc: "Avoid platform service fees (save up to 15%). Fill out this form to check availability and block your dates directly with the owner.",
-                direct_cal_hint: "Check your dates here",
-                form_name: "Full Name",
-                form_email: "Email",
-                form_dates: "Stay Dates",
-                form_guests: "Guests",
-                form_msg: "Message (Optional)",
-                form_btn: "Request a free quote",
-                pr_advantage: "Perfect to simplify your holiday!",
             },
             nl: {
                 arcs_tag: "Een van de grootste skigebieden ter wereld", 
@@ -635,13 +662,28 @@
                 ski_title: "Verwarmde skilocker & Balkon", ski_desc: "Privé skilocker op de begane grond met elektrische schoendroger. Balkon met vrij uitzicht op de bergen en het skigebied.",
                 gal_title: "Fotogalerij",
                 tab_all: "Alle", tab_salon: "Woonkamer & Balkon", tab_couchages: "Entree & Berghoek", tab_cuisine: "Keuken & Badkamer", tab_station: "Residentie & Dorp",
-                book_tag: "Direct Boeken", book_title: "Beschikbaarheid & Reservering",
-                pr_badge: "⭐ Direct boeken bij het skigebied",
-                pr_label: "Boekingskantoor La Plagne",
-                pr_desc: "Boek rechtstreeks bij het skigebied en voeg skipassen, lessen en materiaalhuur toe aan uw verblijf (volgens de actuele aanbiedingen).",
-                abritel_desc: "Reserveren en betalen via het Abritel-platform.", abritel_btn: "Bekijk op Abritel →",
-                airbnb_desc: "Reserveren en betalen via het Airbnb-platform.", airbnb_btn: "Bekijk op Airbnb →",
-                pr_btn: "Boek via Plagne Resort →",
+                book_tag: "Boek uw verblijf",
+                book_title: "Beschikbaarheid & Reservering",
+                best_price_badge: "💰 Beste prijsgarantie",
+                direct_title: "Directe Reservering",
+                direct_desc: "Vermijd servicekosten van platforms (bespaar tot 15%). Vul dit formulier in om de beschikbaarheid te controleren en uw data rechtstreeks bij de eigenaar vast te leggen.",
+                direct_cal_hint: "Kies uw data hiernaast (zaterdag tot zaterdag in de winter)",
+                form_firstname: "Voornaam",
+                form_lastname: "Achternaam",
+                form_email: "E-mail",
+                form_dates: "Verblijfsdata",
+                form_guests: "Aantal personen",
+                form_msg: "Bericht (Optioneel)",
+                form_btn: "Vrijblijvende offerte aanvragen",
+                pr_badge: "⛷️ Het alles-in-één voordeel",
+                pr_name: "Centrale Plagne Resort",
+                pr_advantage: "Ideaal om uw vakantie eenvoudig te regelen!",
+                pr_desc: "Boek de accommodatie en voeg direct uw <strong>skipassen</strong>, <strong>ESF-skilessen</strong> en <strong>materiaalhuur</strong> toe aan dezelfde winkelwagen, vaak met korting.",
+                pr_btn: "Bekijk op Plagne Resort →",
+                airbnb_desc: "Reserveren via het Airbnb-platform (servicekosten van toepassing).",
+                airbnb_btn: "Bekijk op Airbnb →",
+                abritel_desc: "Reserveren via het Abritel-platform (servicekosten van toepassing).",
+                abritel_btn: "Bekijk op Abritel →",
                 faq_tag: "Handige Informatie", faq_title: "Uw aankomst voorbereiden",
                 faq_q1: "🚗 Ondergrondse parking & overdekte toegang",
                 faq_a1: "Parkeren in de bovenste ondergrondse parkeergarage. Het gebouw is bereikbaar via een overdekte gang van 100 m: bagage uitladen zonder door de sneeuw te lopen. 's Zomers gratis parkeren in dezelfde parkeergarage.",
@@ -650,17 +692,6 @@
                 contact_tag: "Vragen over het appartement?", contact_desc: "Jérôme is bereikbaar via telefoon of WhatsApp:", btn_call: "📞 Bellen",
                 live_tag: "Live vanaf de pistes", live_title: "Webcam Roche de Mio (2.730 m)",
                 reg_label: "Registratienummer",
-                best_price_badge: "💰 Beste prijsgarantie",
-                direct_title: "Directe Reservering",
-                direct_desc: "Vermijd servicekosten van platforms (bespaar tot 15%). Vul dit formulier in om de beschikbaarheid te controleren en uw data rechtstreeks bij de eigenaar vast te leggen.",
-                direct_cal_hint: "Controleer uw data hiernaast",
-                form_name: "Voor- en achternaam",
-                form_email: "E-mail",
-                form_dates: "Verblijfsdata",
-                form_guests: "Aantal personen",
-                form_msg: "Bericht (Optioneel)",
-                form_btn: "Vrijblijvende offerte aanvragen",
-                pr_advantage: "Ideaal om uw vakantie eenvoudig te regelen!"
             },
             de: {
                 arcs_tag: "Eines der größten Skigebiete der Welt", 
@@ -676,7 +707,7 @@
                 btn_book_now: "Verfügbarkeit & Preise",
                 btn_see_photos: "Fotos ansehen",
                 stat_cap_label: "Kapazität", stat_cap_val: "5 Schlafplätze", stat_cap_sub: "23 m² optimiert",
-                stat_ski_label: "Skipisten", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out Tür",
+                stat_ski_label: "Skipistes", stat_ski_val: "0 Meter", stat_ski_sub: "Ski-in / ski-out Tür",
                 stat_park_label: "Tiefgarage", stat_park_val: "100% Überdacht", stat_park_sub: "Direkter Gang 100 m",
                 stat_alt_label: "Höhe", stat_alt_val: "2.050 m", stat_alt_sub: "Autofreier Ort",
                 equip_tag: "Komfort & Ausstattung", equip_title: "Ausstattung & Schlafen (5 Personen)",
@@ -686,13 +717,28 @@
                 ski_title: "Beheizter Skischrank & Balkon", ski_desc: "Eigener Skischrank im EG mit elektrischem Schuhtrockner für warme Skischuhe. Balkon mit freiem Blick auf die Berge und das Skigebiet.",
                 gal_title: "Fotogalerie",
                 tab_all: "Alle", tab_salon: "Wohnen & Terrasse", tab_couchages: "Eingang & Schlafkabine", tab_cuisine: "Küche & Bad", tab_station: "Residenz & Skigebiet",
-                book_tag: "Direktbuchung", book_title: "Verfügbarkeit & Buchung",
-                pr_badge: "⭐ Direkt beim Skigebiet buchen",
-                pr_label: "Buchungsstelle La Plagne",
-                pr_desc: "Buchen Sie direkt beim Skigebiet und ergänzen Sie Ihren Aufenthalt um Skipässe, Kurse und Skiverleih (je nach aktuellen Angeboten).",
-                abritel_desc: "Buchung und Bezahlung über die Plattform Abritel.", abritel_btn: "Auf Abritel ansehen →",
-                airbnb_desc: "Buchung und Bezahlung über die Plattform Airbnb.", airbnb_btn: "Auf Airbnb ansehen →",
-                pr_btn: "Buchen auf Plagne Resort →",
+                book_tag: "Buchen Sie Ihren Aufenthalt",
+                book_title: "Verfügbarkeit & Buchung",
+                best_price_badge: "💰 Bestpreisgarantie",
+                direct_title: "Direktbuchung",
+                direct_desc: "Vermeiden Sie Plattform-Servicegebühren (bis zu 15 % sparen). Füllen Sie dieses Formular aus, um die Verfügbarkeit zu prüfen und Ihre Daten direkt beim Eigentümer zu sichern.",
+                direct_cal_hint: "Wählen Sie Ihre Daten hier (im Winter Samstag bis Samstag)",
+                form_firstname: "Vorname",
+                form_lastname: "Nachname",
+                form_email: "E-Mail",
+                form_dates: "Reisedaten",
+                form_guests: "Reisende",
+                form_msg: "Nachricht (Optional)",
+                form_btn: "Unverbindliches Angebot anfordern",
+                pr_badge: "⛷️ Der All-in-One-Vorteil",
+                pr_name: "Buchungszentrale Plagne Resort",
+                pr_advantage: "Ideal, um Ihren Urlaub stressfrei zu planen!",
+                pr_desc: "Buchen Sie die Unterkunft und legen Sie Ihre <strong>Skipässe</strong>, <strong>ESF-Skikurse</strong> und Ihre <strong>Skiausrüstung</strong> direkt mit in den Warenkorb – oft mit attraktiven Rabatten.",
+                pr_btn: "Auf Plagne Resort ansehen →",
+                airbnb_desc: "Buchung über die Plattform Airbnb (Servicegebühren fallen an).",
+                airbnb_btn: "Auf Airbnb ansehen →",
+                abritel_desc: "Buchung über die Plattform Abritel (Servicegebühren fallen an).",
+                abritel_btn: "Auf Abritel ansehen →",
                 faq_tag: "Nützliche Informationen", faq_title: "Anreise vorbereiten",
                 faq_q1: "🚗 Tiefgarage & überdachter Zugang",
                 faq_a1: "Parken im oberen Parkhaus. Der Zugang zum Gebäude erfolgt über einen 100 m langen überdachten Gang: Gepäck entladen ohne durch den Schnee zu laufen. Im Sommer kostenloses Parken im selben Parkhaus.",
@@ -701,17 +747,6 @@
                 contact_tag: "Fragen zur Unterkunft?", contact_desc: "Jérôme steht telefonisch oder per WhatsApp bereit:", btn_call: "📞 Anrufen",
                 live_tag: "Live von den Pisten", live_title: "Webcam Roche de Mio (2.730 m)",
                 reg_label: "Registrierungsnummer",
-                best_price_badge: "💰 Bestpreisgarantie",
-                direct_title: "Direktbuchung",
-                direct_desc: "Vermeiden Sie Plattform-Servicegebühren (bis zu 15 % sparen). Füllen Sie dieses Formular aus, um die Verfügbarkeit zu prüfen und Ihre Daten direkt beim Eigentümer zu sichern.",
-                direct_cal_hint: "Prüfen Sie Ihre Daten hier",
-                form_name: "Vor- & Nachname",
-                form_email: "E-Mail",
-                form_dates: "Reisedaten",
-                form_guests: "Reisende",
-                form_msg: "Nachricht (Optional)",
-                form_btn: "Unverbindliches Angebot anfordern",
-                pr_advantage: "Ideal, um Ihren Urlaub stressfrei zu planen!"
             }
         };
 
@@ -884,6 +919,158 @@
             renderGallery('all');
         })();
     </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 800, once: true, offset: 80 });
+    
+            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLiQhD5juyHatwazGk_q21OZqf2HEGyJc2jIpa56SyYNvTz5CcT7uyM-9TS8HiKGzVEA/exec";
+    
+            document.addEventListener("DOMContentLoaded", async () => {
+                const toYMD = (d) => {
+                    const y = d.getFullYear();
+                    const m = String(d.getMonth() + 1).padStart(2, '0');
+                    const day = String(d.getDate()).padStart(2, '0');
+                    return `${y}-${m}-${day}`;
+                };
+    
+                const addDays = (ymd, days) => {
+                    const [y, m, d] = ymd.split('-').map(Number);
+                    return toYMD(new Date(y, m - 1, d + days));
+                };
+    
+                const todayStr = toYMD(new Date());
+                let creneaux = [];
+    
+                try {
+                    const response = await fetch(SCRIPT_URL);
+                    const json = await response.json();
+                    creneaux = json.creneaux || [];
+                } catch (e) {
+                    console.warn("Impossible de charger les disponibilités.");
+                }
+    
+                const freeWeeksMap = new Map();
+                const bookedNights = new Set();
+                let minPreFilled = null;
+                let maxPreFilled = null;
+    
+                creneaux.forEach(c => {
+                    if (!minPreFilled || c.arrivee < minPreFilled) minPreFilled = c.arrivee;
+                    if (!maxPreFilled || c.depart > maxPreFilled) maxPreFilled = c.depart;
+    
+                    if (c.reserve) {
+                        let cur = c.arrivee;
+                        while (cur < c.depart) {
+                            bookedNights.add(cur);
+                            cur = addDays(cur, 1);
+                        }
+                    } else {
+                        freeWeeksMap.set(c.arrivee, c.depart);
+                    }
+                });
+    
+                const nextFreeSaturday = [...freeWeeksMap.keys()].sort().find(d => d >= todayStr) || "today";
+    
+                const departPicker = flatpickr("#date-depart", {
+                    locale: "fr",
+                    minDate: "today",
+                    dateFormat: "Y-m-d",
+                    altInput: true,
+                    altFormat: "d/m/Y"
+                });
+    
+                flatpickr("#date-arrivee", {
+                    locale: "fr",
+                    minDate: "today",
+                    defaultDate: nextFreeSaturday !== "today" ? nextFreeSaturday : null,
+                    dateFormat: "Y-m-d",
+                    altInput: true,
+                    altFormat: "d/m/Y",
+                    disable: [
+                        function(date) {
+                            const d = toYMD(date);
+                            if (bookedNights.has(d)) return true;
+                            if (minPreFilled && d >= minPreFilled && d < maxPreFilled) {
+                                return !freeWeeksMap.has(d);
+                            }
+                            return false;
+                        }
+                    ],
+                    onChange: function(selectedDates, selectedStr) {
+                        departPicker.clear();
+                        if (!selectedStr) return;
+    
+                        if (freeWeeksMap.has(selectedStr)) {
+                            const validCheckouts = new Set();
+                            let cur = selectedStr;
+                            while (freeWeeksMap.has(cur)) {
+                                const nextSat = freeWeeksMap.get(cur);
+                                validCheckouts.add(nextSat);
+                                cur = nextSat;
+                            }
+    
+                            departPicker.set("minDate", freeWeeksMap.get(selectedStr));
+                            departPicker.set("maxDate", null);
+                            departPicker.set("disable", [
+                                function(date) {
+                                    return !validCheckouts.has(toYMD(date));
+                                }
+                            ]);
+                            departPicker.jumpToDate(freeWeeksMap.get(selectedStr));
+                            departPicker.open();
+                        } else {
+                            const nextBooked = [...bookedNights].sort().find(d => d > selectedStr) || null;
+                            departPicker.set("minDate", addDays(selectedStr, 1));
+                            departPicker.set("maxDate", nextBooked);
+                            departPicker.set("disable", []);
+                            departPicker.open();
+                        }
+                    }
+                });
+    
+                const form = document.getElementById('direct-booking-form');
+                if (form) {
+                    form.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const btn = form.querySelector('button[type="submit"]');
+                        const feedback = document.getElementById('form-feedback');
+                        const originalText = btn.innerHTML;
+    
+                        btn.disabled = true;
+                        btn.innerHTML = '⏳ Envoi en cours...';
+    
+                        const payload = {
+                            prenom: form.prenom.value,
+                            nom: form.nom.value,
+                            email: form.email.value,
+                            arrivee: form.arrivee.value,
+                            depart: form.depart.value,
+                            voyageurs: form.voyageurs.value,
+                            message: form.message.value
+                        };
+    
+                        try {
+                            await fetch(SCRIPT_URL, {
+                                method: 'POST',
+                                body: JSON.stringify(payload),
+                                headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                            });
+                            form.reset();
+                            feedback.classList.remove('hidden');
+                        } catch (err) {
+                            alert("Erreur lors de l'envoi. Contactez Jérôme via WhatsApp.");
+                        } finally {
+                            btn.disabled = false;
+                            btn.innerHTML = originalText;
+                        }
+                    });
+                }
+            });
+        </script>
+</body>
+</html>
+    
 </body>
 </html>
   
